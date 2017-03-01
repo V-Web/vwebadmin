@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/custom/config/default/index.yaml',
-    'modified' => 1478362329,
+    'modified' => 1488361828,
     'data' => [
         'name' => 'default',
         'timestamp' => 1478362329,

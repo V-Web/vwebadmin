@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/particles/top-news-joomla.yaml',
-    'modified' => 1474892024,
+    'modified' => 1488361828,
     'data' => [
         'name' => 'Top News (Joomla)',
         'description' => 'Display Joomla articles in a fancy way.',

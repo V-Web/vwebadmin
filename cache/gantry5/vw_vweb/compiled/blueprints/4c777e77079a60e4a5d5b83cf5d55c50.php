@@ -1,249 +1,249 @@
 <?php
 return [
     '@class' => 'Gantry\\Component\\Config\\CompiledBlueprints',
-    'timestamp' => 1488291028,
-    'checksum' => '79e6f4b8044c1a26794d8db238ab0047',
+    'timestamp' => 1488361835,
+    'checksum' => '33a12c2beefeb4ce0b6b481828b35b17',
     'files' => [
         'templates/vw_vweb/custom/particles' => [
             'particles/uikit' => [
                 'file' => 'templates/vw_vweb/custom/particles/uikit.yaml',
-                'modified' => 1486049881
+                'modified' => 1488361828
             ]
         ],
         'templates/vw_vweb/particles' => [
             'particles/contentcubes' => [
                 'file' => 'templates/vw_vweb/particles/contentcubes.yaml',
-                'modified' => 1472811504
+                'modified' => 1488361828
             ],
             'particles/contenttabs' => [
                 'file' => 'templates/vw_vweb/particles/contenttabs.yaml',
-                'modified' => 1472811504
+                'modified' => 1488361828
             ],
             'particles/copyright' => [
                 'file' => 'templates/vw_vweb/particles/copyright.yaml',
-                'modified' => 1472811504
+                'modified' => 1488361828
             ],
             'particles/features' => [
                 'file' => 'templates/vw_vweb/particles/features.yaml',
-                'modified' => 1466609882
+                'modified' => 1488361828
             ],
             'particles/feedback' => [
                 'file' => 'templates/vw_vweb/particles/feedback.yaml',
-                'modified' => 1456756938
+                'modified' => 1488361828
             ],
             'particles/googlemap' => [
                 'file' => 'templates/vw_vweb/particles/googlemap.yaml',
-                'modified' => 1472404652
+                'modified' => 1488361828
             ],
             'particles/headroom' => [
                 'file' => 'templates/vw_vweb/particles/headroom.yaml',
-                'modified' => 1453984936
+                'modified' => 1488361828
             ],
             'particles/horizontalmenu' => [
                 'file' => 'templates/vw_vweb/particles/horizontalmenu.yaml',
-                'modified' => 1472811504
+                'modified' => 1488361828
             ],
             'particles/logo' => [
                 'file' => 'templates/vw_vweb/particles/logo.yaml',
-                'modified' => 1480364243
+                'modified' => 1488361828
             ],
             'particles/news-pro-joomla' => [
                 'file' => 'templates/vw_vweb/particles/news-pro-joomla.yaml',
-                'modified' => 1474836038
+                'modified' => 1488361828
             ],
             'particles/onepage-menu' => [
                 'file' => 'templates/vw_vweb/particles/onepage-menu.yaml',
-                'modified' => 1456507266
+                'modified' => 1488361828
             ],
             'particles/owlcarousel' => [
                 'file' => 'templates/vw_vweb/particles/owlcarousel.yaml',
-                'modified' => 1477625270
+                'modified' => 1488361828
             ],
             'particles/pricing' => [
                 'file' => 'templates/vw_vweb/particles/pricing.yaml',
-                'modified' => 1479037208
+                'modified' => 1488361828
             ],
             'particles/scrollreveal-js' => [
                 'file' => 'templates/vw_vweb/particles/scrollreveal-js.yaml',
-                'modified' => 1456580188
+                'modified' => 1488361828
             ],
             'particles/simplecounter' => [
                 'file' => 'templates/vw_vweb/particles/simplecounter.yaml',
-                'modified' => 1452651518
+                'modified' => 1488361828
             ],
             'particles/timeline' => [
                 'file' => 'templates/vw_vweb/particles/timeline.yaml',
-                'modified' => 1472046158
+                'modified' => 1488361828
             ],
             'particles/top-news-joomla' => [
                 'file' => 'templates/vw_vweb/particles/top-news-joomla.yaml',
-                'modified' => 1474892024
+                'modified' => 1488361828
             ]
         ],
         'media/gantry5/engines/nucleus/particles' => [
             'particles/analytics' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/analytics.yaml',
-                'modified' => 1488291015
+                'modified' => 1488361824
             ],
             'particles/assets' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/assets.yaml',
-                'modified' => 1488291015
+                'modified' => 1488361824
             ],
             'particles/branding' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/branding.yaml',
-                'modified' => 1488291015
+                'modified' => 1488361824
             ],
             'particles/content' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/content.yaml',
-                'modified' => 1488291015
+                'modified' => 1488361824
             ],
             'particles/contentarray' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/contentarray.yaml',
-                'modified' => 1488291015
+                'modified' => 1488361824
             ],
             'particles/copyright' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/copyright.yaml',
-                'modified' => 1488291015
+                'modified' => 1488361824
             ],
             'particles/custom' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/custom.yaml',
-                'modified' => 1488291015
+                'modified' => 1488361824
             ],
             'particles/date' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/date.yaml',
-                'modified' => 1488291015
+                'modified' => 1488361824
             ],
             'particles/frameworks' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/frameworks.yaml',
-                'modified' => 1488291015
+                'modified' => 1488361824
             ],
             'particles/lightcase' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/lightcase.yaml',
-                'modified' => 1488291015
+                'modified' => 1488361824
             ],
             'particles/logo' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/logo.yaml',
-                'modified' => 1488291015
+                'modified' => 1488361824
             ],
             'particles/menu' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/menu.yaml',
-                'modified' => 1488291015
+                'modified' => 1488361824
             ],
             'particles/messages' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/messages.yaml',
-                'modified' => 1488291015
+                'modified' => 1488361824
             ],
             'particles/mobile-menu' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/mobile-menu.yaml',
-                'modified' => 1488291015
+                'modified' => 1488361824
             ],
             'particles/module' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/module.yaml',
-                'modified' => 1488291015
+                'modified' => 1488361824
             ],
             'particles/position' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/position.yaml',
-                'modified' => 1488291015
+                'modified' => 1488361824
             ],
             'particles/social' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/social.yaml',
-                'modified' => 1488291015
+                'modified' => 1488361824
             ],
             'particles/spacer' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/spacer.yaml',
-                'modified' => 1488291015
+                'modified' => 1488361824
             ],
             'particles/totop' => [
                 'file' => 'media/gantry5/engines/nucleus/particles/totop.yaml',
-                'modified' => 1488291015
+                'modified' => 1488361824
             ]
         ],
         'templates/vw_vweb/blueprints' => [
             'styles/above' => [
                 'file' => 'templates/vw_vweb/blueprints/styles/above.yaml',
-                'modified' => 1472811504
+                'modified' => 1488361828
             ],
             'styles/accent' => [
                 'file' => 'templates/vw_vweb/blueprints/styles/accent.yaml',
-                'modified' => 1474044573
+                'modified' => 1488361828
             ],
             'styles/base' => [
                 'file' => 'templates/vw_vweb/blueprints/styles/base.yaml',
-                'modified' => 1472811504
+                'modified' => 1488361828
             ],
             'styles/breakpoints' => [
                 'file' => 'templates/vw_vweb/blueprints/styles/breakpoints.yaml',
-                'modified' => 1472811504
+                'modified' => 1488361828
             ],
             'styles/expanded' => [
                 'file' => 'templates/vw_vweb/blueprints/styles/expanded.yaml',
-                'modified' => 1472811504
+                'modified' => 1488361828
             ],
             'styles/features' => [
                 'file' => 'templates/vw_vweb/blueprints/styles/features.yaml',
-                'modified' => 1472811504
+                'modified' => 1488361828
             ],
             'styles/font' => [
                 'file' => 'templates/vw_vweb/blueprints/styles/font.yaml',
-                'modified' => 1474228572
+                'modified' => 1488361828
             ],
             'styles/footer' => [
                 'file' => 'templates/vw_vweb/blueprints/styles/footer.yaml',
-                'modified' => 1472811504
+                'modified' => 1488361828
             ],
             'styles/header' => [
                 'file' => 'templates/vw_vweb/blueprints/styles/header.yaml',
-                'modified' => 1472811504
+                'modified' => 1488361828
             ],
             'styles/intro' => [
                 'file' => 'templates/vw_vweb/blueprints/styles/intro.yaml',
-                'modified' => 1472811504
+                'modified' => 1488361828
             ],
             'styles/menu' => [
                 'file' => 'templates/vw_vweb/blueprints/styles/menu.yaml',
-                'modified' => 1472811504
+                'modified' => 1488361828
             ],
             'styles/navigation' => [
                 'file' => 'templates/vw_vweb/blueprints/styles/navigation.yaml',
-                'modified' => 1472811504
+                'modified' => 1488361828
             ],
             'styles/offcanvas' => [
                 'file' => 'templates/vw_vweb/blueprints/styles/offcanvas.yaml',
-                'modified' => 1472811504
+                'modified' => 1488361828
             ],
             'styles/quoteone' => [
                 'file' => 'templates/vw_vweb/blueprints/styles/quoteone.yaml',
-                'modified' => 1483047750
+                'modified' => 1488361828
             ],
             'styles/related' => [
                 'file' => 'templates/vw_vweb/blueprints/styles/related.yaml',
-                'modified' => 1479116379
+                'modified' => 1488361828
             ],
             'styles/services' => [
                 'file' => 'templates/vw_vweb/blueprints/styles/services.yaml',
-                'modified' => 1474232915
+                'modified' => 1488361828
             ],
             'styles/testimonials' => [
                 'file' => 'templates/vw_vweb/blueprints/styles/testimonials.yaml',
-                'modified' => 1472811504
+                'modified' => 1488361828
             ],
             'styles/utility' => [
                 'file' => 'templates/vw_vweb/blueprints/styles/utility.yaml',
-                'modified' => 1472811504
+                'modified' => 1488361828
             ]
         ],
         'media/gantry5/engines/nucleus/blueprints' => [
             'page/assets' => [
                 'file' => 'media/gantry5/engines/nucleus/blueprints/page/assets.yaml',
-                'modified' => 1488291015
+                'modified' => 1488361824
             ],
             'page/body' => [
                 'file' => 'media/gantry5/engines/nucleus/blueprints/page/body.yaml',
-                'modified' => 1488291015
+                'modified' => 1488361824
             ],
             'page/head' => [
                 'file' => 'media/gantry5/engines/nucleus/blueprints/page/head.yaml',
-                'modified' => 1488291015
+                'modified' => 1488361824
             ]
         ]
     ],

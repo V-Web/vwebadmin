@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/particles/pricing.yaml',
-    'modified' => 1479037208,
+    'modified' => 1488361828,
     'data' => [
         'name' => 'Pricing Tables',
         'description' => 'Display pricing tables.',

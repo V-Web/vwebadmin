@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/particles/contentcubes.yaml',
-    'modified' => 1472811504,
+    'modified' => 1488361828,
     'data' => [
         'name' => 'Content Cubes',
         'description' => 'Display content in side-by-side cubes.',

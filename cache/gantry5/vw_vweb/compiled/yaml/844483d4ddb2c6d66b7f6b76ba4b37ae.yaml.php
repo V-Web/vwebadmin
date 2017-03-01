@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/gantry/presets.yaml',
-    'modified' => 1474044684,
+    'modified' => 1488361828,
     'data' => [
         'preset1' => [
             'image' => 'gantry-admin://images/preset1.png',

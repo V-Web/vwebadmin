@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/blueprints/styles/services.yaml',
-    'modified' => 1474232915,
+    'modified' => 1488361828,
     'data' => [
         'name' => 'Services Styles',
         'description' => 'Services section styles for the Helium theme',

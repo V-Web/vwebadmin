@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/custom/particles/uikit.yaml',
-    'modified' => 1486049881,
+    'modified' => 1488361828,
     'data' => [
         'name' => 'UIkit for Gantry5',
         'description' => 'Configure UIkit for Gantry5.',

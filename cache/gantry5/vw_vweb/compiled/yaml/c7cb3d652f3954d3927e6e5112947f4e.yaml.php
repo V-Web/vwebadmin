@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/particles/headroom.yaml',
-    'modified' => 1453984936,
+    'modified' => 1488361828,
     'data' => [
         'name' => 'Headroom.js',
         'description' => 'Configure Headroom.js (Fixed Header).',

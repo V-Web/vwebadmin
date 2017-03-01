@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/custom/config/default/styles.yaml',
-    'modified' => 1483047893,
+    'modified' => 1488361828,
     'data' => [
         'preset' => 'preset1',
         'base' => [

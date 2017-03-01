@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/config/default/particles/social.yaml',
-    'modified' => 1472811504,
+    'modified' => 1488361828,
     'data' => [
         'enabled' => '1',
         'css' => [

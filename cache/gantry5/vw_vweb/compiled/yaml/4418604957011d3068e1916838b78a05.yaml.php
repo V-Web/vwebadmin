@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/particles/timeline.yaml',
-    'modified' => 1472046158,
+    'modified' => 1488361828,
     'data' => [
         'name' => 'Timeline',
         'description' => 'Display items in a time line.',

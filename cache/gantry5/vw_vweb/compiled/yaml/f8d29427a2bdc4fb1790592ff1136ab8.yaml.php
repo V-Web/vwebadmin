@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/blueprints/styles/offcanvas.yaml',
-    'modified' => 1472811504,
+    'modified' => 1488361828,
     'data' => [
         'name' => 'Offcanvas Styles',
         'description' => 'Paramters for the Off Canvas sidepanel section.',

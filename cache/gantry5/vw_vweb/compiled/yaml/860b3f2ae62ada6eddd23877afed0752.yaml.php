@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/custom/config/menu/hoofdmenu.yaml',
-    'modified' => 1478543637,
+    'modified' => 1488361828,
     'data' => [
         'ordering' => [
             'v-web-home' => '',

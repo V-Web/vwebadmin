@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/particles/features.yaml',
-    'modified' => 1466609882,
+    'modified' => 1488361828,
     'data' => [
         'name' => 'Features',
         'description' => 'Display features.',

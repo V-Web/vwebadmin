@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/blueprints/styles/testimonials.yaml',
-    'modified' => 1472811504,
+    'modified' => 1488361828,
     'data' => [
         'name' => 'Testimonials Styles',
         'description' => 'Testimonials section styles for the Helium theme',

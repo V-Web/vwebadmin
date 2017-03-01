@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/particles/onepage-menu.yaml',
-    'modified' => 1456507266,
+    'modified' => 1488361828,
     'data' => [
         'name' => 'OnePage Menu',
         'description' => 'Display OnePage Menu.',

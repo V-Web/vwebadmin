@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/blueprints/styles/accent.yaml',
-    'modified' => 1474044573,
+    'modified' => 1488361828,
     'data' => [
         'name' => 'Accent Colors',
         'description' => 'Accent colors for the Helium theme',

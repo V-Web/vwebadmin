@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/media/gantry5/engines/nucleus/particles/mobile-menu.yaml',
-    'modified' => 1488291015,
+    'modified' => 1488361824,
     'data' => [
         'name' => 'Mobile Menu',
         'description' => 'Renders the mobile menu container for the offcanvas section.',

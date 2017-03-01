@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/blueprints/styles/related.yaml',
-    'modified' => 1479116379,
+    'modified' => 1488361828,
     'data' => [
         'name' => 'Related Styles',
         'description' => 'Related section styles for the V-Web theme',

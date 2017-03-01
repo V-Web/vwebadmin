@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/blueprints/styles/font.yaml',
-    'modified' => 1474228572,
+    'modified' => 1488361828,
     'data' => [
         'name' => 'Font Families',
         'description' => 'Font families for the Helium theme',

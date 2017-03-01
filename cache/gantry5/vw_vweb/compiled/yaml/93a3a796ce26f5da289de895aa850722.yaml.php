@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/particles/logo.yaml',
-    'modified' => 1480364243,
+    'modified' => 1488361828,
     'data' => [
         'name' => 'Logo / Image',
         'description' => 'Display a logo or an image.',

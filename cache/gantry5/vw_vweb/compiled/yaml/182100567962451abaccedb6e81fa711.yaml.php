@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/gantry/theme.yaml',
-    'modified' => 1474037448,
+    'modified' => 1488361828,
     'data' => [
         'details' => [
             'name' => 'V-Web',

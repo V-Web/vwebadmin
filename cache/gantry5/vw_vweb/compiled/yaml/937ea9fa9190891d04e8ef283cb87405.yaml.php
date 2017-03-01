@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/particles/scrollreveal-js.yaml',
-    'modified' => 1456580188,
+    'modified' => 1488361828,
     'data' => [
         'name' => 'ScrollReveal.js',
         'description' => 'Configure ScrollReveal.js.',

@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/particles/owlcarousel.yaml',
-    'modified' => 1477625270,
+    'modified' => 1488361828,
     'data' => [
         'name' => 'Owl Carousel',
         'description' => 'Display Owl Carousel.',

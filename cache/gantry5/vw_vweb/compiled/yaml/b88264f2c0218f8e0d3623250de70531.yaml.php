@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/media/gantry5/engines/nucleus/particles/custom.yaml',
-    'modified' => 1488291015,
+    'modified' => 1488361824,
     'data' => [
         'name' => 'Custom HTML',
         'description' => 'Display custom HTML block.',

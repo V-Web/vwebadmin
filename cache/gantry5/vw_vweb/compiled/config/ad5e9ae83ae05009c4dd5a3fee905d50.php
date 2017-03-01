@@ -1,189 +1,189 @@
 <?php
 return [
     '@class' => 'Gantry\\Component\\Config\\CompiledConfig',
-    'timestamp' => 1488291028,
-    'checksum' => 'cea90c723a64d8c2d1a5e3bb12d43847',
+    'timestamp' => 1488361835,
+    'checksum' => '85a7c6adac5bd1742189c632cf609650',
     'files' => [
         'templates/vw_vweb/custom/config/19' => [
             'assignments' => [
                 'file' => 'templates/vw_vweb/custom/config/19/assignments.yaml',
-                'modified' => 1478510412
+                'modified' => 1488361828
             ],
             'index' => [
                 'file' => 'templates/vw_vweb/custom/config/19/index.yaml',
-                'modified' => 1483041406
+                'modified' => 1488361828
             ],
             'layout' => [
                 'file' => 'templates/vw_vweb/custom/config/19/layout.yaml',
-                'modified' => 1483041406
+                'modified' => 1488361828
             ]
         ],
         'templates/vw_vweb/custom/config/default' => [
             'index' => [
                 'file' => 'templates/vw_vweb/custom/config/default/index.yaml',
-                'modified' => 1478362329
+                'modified' => 1488361828
             ],
             'layout' => [
                 'file' => 'templates/vw_vweb/custom/config/default/layout.yaml',
-                'modified' => 1478362329
+                'modified' => 1488361828
             ],
             'page/assets' => [
                 'file' => 'templates/vw_vweb/custom/config/default/page/assets.yaml',
-                'modified' => 1486048692
+                'modified' => 1488361828
             ],
             'page/body' => [
                 'file' => 'templates/vw_vweb/custom/config/default/page/body.yaml',
-                'modified' => 1486048692
+                'modified' => 1488361828
             ],
             'page/head' => [
                 'file' => 'templates/vw_vweb/custom/config/default/page/head.yaml',
-                'modified' => 1486048692
+                'modified' => 1488361828
             ],
             'particles/branding' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/branding.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/content' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/content.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/contentarray' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/contentarray.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/contentcubes' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/contentcubes.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/contenttabs' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/contenttabs.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/copyright' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/copyright.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/custom' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/custom.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/date' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/date.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/features' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/features.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/feedback' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/feedback.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/googlemap' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/googlemap.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/horizontalmenu' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/horizontalmenu.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/logo' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/logo.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/menu' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/menu.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/messages' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/messages.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/mobile-menu' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/mobile-menu.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/module' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/module.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/news-pro-joomla' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/news-pro-joomla.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/onepage-menu' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/onepage-menu.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/owlcarousel' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/owlcarousel.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/position' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/position.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/pricing' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/pricing.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/simplecounter' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/simplecounter.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/social' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/social.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/spacer' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/spacer.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/timeline' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/timeline.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/top-news-joomla' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/top-news-joomla.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'particles/totop' => [
                 'file' => 'templates/vw_vweb/custom/config/default/particles/totop.yaml',
-                'modified' => 1479844324
+                'modified' => 1488361828
             ],
             'styles' => [
                 'file' => 'templates/vw_vweb/custom/config/default/styles.yaml',
-                'modified' => 1483047893
+                'modified' => 1488361828
             ]
         ],
         'templates/vw_vweb/config/default' => [
             'page/body' => [
                 'file' => 'templates/vw_vweb/config/default/page/body.yaml',
-                'modified' => 1474057090
+                'modified' => 1488361828
             ],
             'page/head' => [
                 'file' => 'templates/vw_vweb/config/default/page/head.yaml',
-                'modified' => 1472811504
+                'modified' => 1488361828
             ],
             'particles/branding' => [
                 'file' => 'templates/vw_vweb/config/default/particles/branding.yaml',
-                'modified' => 1474038546
+                'modified' => 1488361828
             ],
             'particles/copyright' => [
                 'file' => 'templates/vw_vweb/config/default/particles/copyright.yaml',
-                'modified' => 1477334650
+                'modified' => 1488361828
             ],
             'particles/logo' => [
                 'file' => 'templates/vw_vweb/config/default/particles/logo.yaml',
-                'modified' => 1474139588
+                'modified' => 1488361828
             ],
             'particles/social' => [
                 'file' => 'templates/vw_vweb/config/default/particles/social.yaml',
-                'modified' => 1472811504
+                'modified' => 1488361828
             ],
             'particles/totop' => [
                 'file' => 'templates/vw_vweb/config/default/particles/totop.yaml',
-                'modified' => 1474038311
+                'modified' => 1488361828
             ]
         ]
     ],

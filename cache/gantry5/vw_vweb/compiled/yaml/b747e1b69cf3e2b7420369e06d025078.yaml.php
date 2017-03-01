@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/particles/simplecounter.yaml',
-    'modified' => 1452651518,
+    'modified' => 1488361828,
     'data' => [
         'name' => 'Simple Counter',
         'description' => 'Display simple counter.',

@@ -1,13 +1,13 @@
 <?php
 return [
     '@class' => 'Gantry\\Component\\Config\\CompiledConfig',
-    'timestamp' => 1488291028,
-    'checksum' => '7ab15268576a54e856647fcfa6c2f98c',
+    'timestamp' => 1488361835,
+    'checksum' => '705ea380d8c219c8f0f86fd8c32fb203',
     'files' => [
         0 => [
             19 => [
                 'file' => 'templates/vw_vweb/custom/config/19/assignments.yaml',
-                'modified' => 1478510412
+                'modified' => 1488361828
             ]
         ]
     ],

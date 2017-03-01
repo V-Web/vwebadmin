@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/particles/copyright.yaml',
-    'modified' => 1472811504,
+    'modified' => 1488361828,
     'data' => [
         'name' => 'Copyright',
         'description' => 'Display copyright information.',

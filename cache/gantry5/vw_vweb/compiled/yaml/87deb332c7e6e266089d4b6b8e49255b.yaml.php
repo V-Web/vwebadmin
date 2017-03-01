@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/blueprints/styles/quoteone.yaml',
-    'modified' => 1483047750,
+    'modified' => 1488361828,
     'data' => [
         'name' => 'Quote One Styles',
         'description' => 'Quote One section styles for the V-Web theme',

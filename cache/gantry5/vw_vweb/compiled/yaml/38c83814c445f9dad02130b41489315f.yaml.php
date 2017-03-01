@@ -2,7 +2,7 @@
 return [
     '@class' => 'Gantry\\Component\\File\\CompiledYamlFile',
     'filename' => '/Users/Marcel/Sites/hello/templates/vw_vweb/particles/googlemap.yaml',
-    'modified' => 1472404652,
+    'modified' => 1488361828,
     'data' => [
         'name' => 'Google Map',
         'description' => 'Display a Google Map.',
