@@ -1,0 +1,15 @@
+name: Related Styles
+description: Related section styles for the V-Web theme
+type: section
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "#312f38"
+    text-color:
+      type: input.colorpicker
+      label: Text
+      default: "#ffffff"

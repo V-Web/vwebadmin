@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="search">
+    <name>plg_search_vwebadmin</name>
+    <author>Marcel Venema</author>
+    <creationDate>2017-01-29</creationDate>
+    <copyright>2017 V-Web.nl</copyright>
+    <license>GNU General Public License versie 2 of hoger; Zie LICENSE.txt</license>
+    <authorEmail>marcel.venema@v-web.nl</authorEmail>
+    <authorUrl>http://www.v-web.nl/</authorUrl>
+    <version>CVS: 1.0.20</version>
+    <description>PLG_SEARCH_COM_VWEBADMIN_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="vwebadmin">vwebadmin.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages folder="../../../languages/site/search/vwebadmin">
+        
+			<language tag="nl-NL">../../../languages/plugins/search/vwebadmin/nl-NL/nl-NL.plg_search_vwebadmin.ini</language>
+			<language tag="nl-NL">../../../languages/plugins/search/vwebadmin/nl-NL/nl-NL.plg_search_vwebadmin.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+
+            <fieldset name="basic">
+                <field name="search_limit" type="text" default="50" size="5"
+                       description="PLG_SEARCH_COM_VWEBADMIN_FIELD_SEARCHLIMIT_DESC"
+                       label="PLG_SEARCH_COM_VWEBADMIN_FIELD_SEARCHLIMIT_LABEL" />
+            </fieldset>
+
+        </fields>
+    </config>
+</extension>

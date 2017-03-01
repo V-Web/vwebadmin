@@ -1,0 +1,250 @@
+// Set the variable defaults in case they are missing in the template
+$base-title-color: #4d4d4d !default;
+
+.g-features-particle {
+	margin-left: -($content-padding);
+	margin-right: -($content-padding);
+	text-align: center;
+	.g-particle-intro {
+		.g-main-title {
+			font-size: 1.8rem;
+			@include breakpoint(mobile-only){
+				font-size: 1.4rem;
+			}
+			text-transform: uppercase;
+		}
+	}
+	.g-content {
+		margin: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.g-features-particle-item {
+		@include breakpoint(mobile-only) {
+			margin-bottom: ($content-margin + $content-padding)*2;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	p {
+		margin: 0;
+	}
+	.g-features-particle-title {
+		font-size: 1.5rem;
+		margin-top: 0.75rem;
+		margin-bottom: 1rem;
+		text-align: right;
+		text-transform: uppercase;
+		a {
+			color: $services-heading-link-color;
+			&:hover {
+				color: $accent-color-1;
+			}
+		}
+	}
+	.g-features-particle-icon, .g-circle-border {
+		border-radius: 50%;
+		font-size: 2.5rem;
+		height: 110px;
+		width: 110px;
+		line-height: 110px;
+		text-align: center;
+		vertical-align: middle;
+		margin-bottom: 0.75rem;
+		margin-right: 0.75rem;
+		color: #c0c0c0;
+		position: relative;
+		display: inline-block;
+		@include transition(all 0.2s linear 0s);
+	}
+	.g-circle-border {
+		background: transparent none repeat scroll 0 0;
+		border: 1px solid $base-border-color;
+		height: 108px;
+		width: 108px;
+		left: 1px;
+		top: 1px;
+		z-index: 1;
+		position: absolute;
+		@include transition-timing-function(cubic-bezier(0.5, -0.7, 0.67, 0.7));
+	}
+	.g-features-particle-item {
+		&:hover {
+			.g-features-particle-icon {
+				color: #ffffff;
+				background: $accent-color-1;
+			}
+			.g-circle-border {
+				border-color: #fff;
+			    @include transform(scale(1.18));
+			    @include transition-timing-function(cubic-bezier(0.4, 0.25, 0.14, 1.73));
+			}
+
+		}
+	}
+}
+
+// Style 2, 3, 4 and 5 
+.g-features2-particle {
+	margin-left: -($content-padding);
+	margin-right: -($content-padding);
+	.g-grid {
+		margin-bottom: ($content-padding + $content-margin)*1.5;
+		&:last-child {
+			margin-bottom: 0;
+			.g-features2-particle-item {
+				&:last-child {
+					@include breakpoint(mobile-only) {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		@include breakpoint(mobile-only) {
+			margin-bottom: 0;
+		}
+	}
+	.g-content {
+		margin: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.g-features2-particle-item {
+		@include breakpoint(mobile-only) {
+			margin-bottom: ($content-margin + $content-padding)*1.5;
+		}
+	}
+	p {
+		margin: 0;
+	}
+	.g-features2-particle-title {
+		margin-top: 0;
+		margin-bottom: 1rem;
+		a {
+			color: $base-title-color;
+			&:hover {
+				color: $accent-color-1;
+			}
+		}
+	}
+	.g-features2-particle-icon {
+		margin-right: 20px;
+		color: $accent-color-1;
+		font-size: 130%;
+	}
+	&.style3 {
+		.g-grid {		
+			.g-block {
+				padding: 0 1rem;
+			}
+		}
+		.g-content {
+			padding-top: 1rem;
+			padding-bottom: 1rem;
+			background: rgba(0,0,0,0.2);
+			&:after {
+				content: "";
+				width: 0;
+				height: 0;
+				border-top: 15px solid rgba(0,0,0,0.2);
+				border-right: 15px solid transparent;
+				position: absolute;
+				margin-top: 16px;
+				margin-left: -15px;
+				z-index: 99;
+			}
+		}
+	}
+	&.style4 {
+		.g-features2-particle-icon {
+			float: left;
+			font-size: 55px;
+			margin-right: 0;
+			color: lighten($base-text-color, 15%);
+		}
+		.g-title-desc-container {
+			margin-left: 75px;
+		}
+		.g-features2-particle-title {
+			margin-bottom: 10px;
+		}
+		.accent1 {
+			.g-features2-particle-icon {
+				color: $accent-color-1;
+			}
+		}
+		.accent2 {
+			.g-features2-particle-icon {
+				color: $accent-color-2;
+			}
+		}
+	}
+	&.style5 {
+		.g-features2-particle-icon {
+			float: left;
+			font-size: 24px;
+			margin-right: 0;
+			color: lighten($base-text-color, 10%);
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
+			text-align: center;
+			margin-top: 5px;
+			border: 1px solid;
+			border-radius: 50%;
+		}
+		.g-title-desc-container {
+			margin-left: 75px;
+		}
+		.g-features2-particle-title {
+			margin-bottom: 10px;
+		}
+		.accent1 {
+			.g-features2-particle-icon {
+				color: $accent-color-1;
+			}
+		}
+		.accent2 {
+			.g-features2-particle-icon {
+				color: $accent-color-2;
+			}
+		}
+	}
+}
+.g-features-particle-icon {
+	float: left;
+}
+.g-features-particle-desc {
+	text-align: right;
+}
+@include breakpoint(desktop-range) {
+	.g-features-particle-title {
+		font-size: 1.3rem!important;
+	}
+	.g-features-particle .g-features-particle-icon, .g-features-particle .g-circle-border {
+		height: 100px;
+		line-height: 100px;
+		width: 100px;
+	}
+	.g-features-particle .g-circle-border {
+		height: 98px;
+		width: 98px;
+	}
+}
+@include breakpoint(tablet-range) {
+	.g-features-particle-icon {
+		float: none;
+	}
+	.g-features-particle-desc {
+		text-align: center;
+	}
+	.g-features-particle-title {
+		text-align: center!important;
+	}
+}
+@include breakpoint(mobile-only) {
+	.g-features-particle-desc {
+		font-size: 0.95rem;
+	}
+}

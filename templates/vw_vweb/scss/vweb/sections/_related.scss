@@ -1,0 +1,13 @@
+#g-related {
+    background: $related-background;
+    border-top: solid 2px $related-text-color;
+    color: $related-text-color;
+    padding: ($section-padding/2) 0;
+}
+
+@media print {
+    #g-related {
+        background: #fff !important;
+        color: #000 !important;
+    }
+}

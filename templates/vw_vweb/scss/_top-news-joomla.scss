@@ -1,0 +1,304 @@
+// Set the variable defaults in case they are missing in the template
+$fontsizes-body-font-size: 0.9rem !default;
+
+.g-top-news {
+	&:not(.gutter-disabled) {
+		margin-left: -($content-padding);
+		margin-right: -($content-padding);
+	}
+	.g-content {
+		margin: 0;
+		&.g-top-news-main {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+	.g-top-news-container {
+		.g-top-news-main {
+			.g-article-title {
+				font-size: $fontsizes-body-font-size*1.5;
+			}
+			.g-article-category {
+				opacity: 1;
+			}
+			@include breakpoint(mobile-only) {
+				width: 100% !important;
+			}
+		}
+		.g-top-news-secondary {
+			.g-article-text {
+				display: none;
+			}
+			&:hover {
+				.g-article-category {
+					opacity: 1;
+				}				
+			}
+			@include breakpoint(mobile-only) {
+				width: 100% !important;
+			}
+			&.g-tn2 {
+				@include breakpoint(mobile-only) {
+					width: 100% !important;
+				}
+			}
+		}
+	}
+	.g-top-news-item {
+		float: left;
+		position: relative;
+		@include breakpoint(mobile-only) {
+			float: none;
+		}
+	}
+	.g-top-news-item-inner {
+		height: 100%;
+		background-position: center;
+		background-size: cover;
+		position: relative;
+		overflow: hidden;
+		&:hover {
+			.g-top-news-item-image {
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	.g-top-news-item-image {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+			&:after {
+				@include background(linear-gradient(to bottom, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0.15) 20%, rgba(0, 0, 0, 0.8) 100%));
+				content: '';
+				position: absolute;
+				width: 100%;
+				bottom: 0;
+				height: 80%;
+				opacity: 0.9;
+				@include transition(opacity 0.2s);
+			}
+		> a {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+		}
+	}
+	.g-top-news-item-info {
+		z-index: 2;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		padding: 20px;
+		color: #dddddd;
+		.g-article-category {
+			display: block;
+			opacity: 0;
+			@include transition(opacity 0.3s);
+			@include breakpoint(mobile-only) {
+				opacity: 1;
+			}
+			span {
+				color: #ffffff;
+				padding: 1px 10px;
+				border-radius: 3px;
+				background: $accent-color-1;
+				text-transform: uppercase;
+				font-weight: 600;
+				font-size: 0.7rem;
+				@include transition(all 0.2s);
+			}
+			a {
+				&:hover {
+					span {
+						background: darken($accent-color-1, 10%);
+					}
+				}
+			}
+		}
+		.g-article-title {
+			color: #ffffff;
+			margin: 15px 0;
+			font-weight: 600;
+			text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+			a {
+				color: #ffffff;
+			}
+		}
+		.g-article-details {
+			text-transform: uppercase;
+			font-weight: 600;
+			font-size: 0.7rem;
+			text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+			> span {
+				margin-right: 10px;
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+			i {
+				margin-right: 5px;
+			}
+		}
+		.g-article-text {
+			margin-top: 15px;
+			font-weight: 600;
+			text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+		}
+	}
+	&.style1 {
+		&.gutter-disabled {
+			.g-tn1 {
+				padding: 0 1px 0 0;
+				@include breakpoint(mobile-only) {
+					padding: 0 0 1px 0;
+				}
+			}			
+			.g-tn2 {
+				padding: 0 1px 1px 1px;
+				@include breakpoint(mobile-only) {
+					padding: 1px 0 1px 0;
+				}
+			}
+			.g-tn3 {
+				padding: 0 0 1px 1px;
+				@include breakpoint(mobile-only) {
+					padding: 1px 0 1px 0;
+				}
+			}
+			.g-tn4 {
+				padding: 1px 1px 0 1px;
+				@include breakpoint(mobile-only) {
+					padding: 1px 0 1px 0;
+				}
+			}
+			.g-tn5 {
+				padding: 1px 0 0 1px;
+				@include breakpoint(mobile-only) {
+					padding: 1px 0 0 0;
+				}
+			}
+		}
+		&.gutter-enabled {
+			.g-tn1 {
+				@include breakpoint(mobile-only) {
+					padding-bottom: $content-padding;
+				}				
+			}
+			.g-tn2, .g-tn3 {
+				padding-top: 0;
+				@include breakpoint(mobile-only) {
+					padding-top: $content-padding;
+				}
+			}
+			.g-tn4, .g-tn5 {
+				padding-bottom: 0;
+				@include breakpoint(mobile-only) {
+					padding-bottom: $content-padding;
+				}
+			}
+			.g-tn5 {
+				@include breakpoint(mobile-only) {
+					padding-bottom: 0;
+				}				
+			}
+		}
+	}
+	&.style2 {
+		&.gutter-disabled {
+			.g-tn1 {
+				padding: 0 1px 0 0;
+				@include breakpoint(mobile-only) {
+					padding: 0 0 1px 0;
+				}
+			}			
+			.g-tn2 {
+				padding: 0 0 1px 1px;
+				@include breakpoint(mobile-only) {
+					padding: 1px 0 1px 0;
+				}
+			}
+			.g-tn3 {
+				padding: 1px 0 0 1px;
+				@include breakpoint(mobile-only) {
+					padding: 1px 0 0 0;
+				}
+			}
+		}
+		&.gutter-enabled {
+			.g-tn1 {
+				@include breakpoint(mobile-only) {
+					padding-bottom: $content-padding;
+				}				
+			}
+			.g-tn2 {
+				padding-top: 0;
+				@include breakpoint(mobile-only) {
+					padding-top: $content-padding;
+				}
+			}
+			.g-tn3 {
+				padding-bottom: 0;
+			}
+		}
+	}
+	&.style3 {
+		&.gutter-disabled {
+			.g-tn1 {
+				padding: 0 1px 0 0;
+				@include breakpoint(mobile-only) {
+					padding: 0 0 1px 0;
+				}
+			}			
+			.g-tn2 {
+				padding: 0 0 1px 1px;
+				@include breakpoint(mobile-only) {
+					padding: 1px 0 1px 0;
+				}
+			}
+			.g-tn3 {
+				padding: 1px 1px 0 1px;
+				@include breakpoint(mobile-only) {
+					padding: 1px 0 1px 0;
+				}
+			}
+			.g-tn4 {
+				padding: 1px 0 0 1px;
+				@include breakpoint(mobile-only) {
+					padding: 1px 0 0 0;
+				}
+			}
+		}
+		&.gutter-enabled {
+			.g-tn1 {
+				@include breakpoint(mobile-only) {
+					padding-bottom: $content-padding;
+				}				
+			}
+			.g-tn2 {
+				padding-top: 0;
+				@include breakpoint(mobile-only) {
+					padding-top: $content-padding;
+				}
+			}
+			.g-tn3 {
+				padding-bottom: 0;
+				@include breakpoint(mobile-only) {
+					padding-bottom: $content-padding;
+				}
+			}
+			.g-tn4 {
+				padding-bottom: 0;
+			}
+		}
+	}
+}

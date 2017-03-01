@@ -1,0 +1,17 @@
+enabled: '1'
+apikey: ''
+width: 100%
+height: 500px
+maptype: ROADMAP
+latitude: '52.052312'
+longitude: '4.447141'
+zoom: '7'
+defaultmarker: show
+markertext: ''
+markerstate: '1'
+scrollwheel: '0'
+markers: {  }
+snazzymaps: ''
+css:
+  class: ''
+extra: {  }

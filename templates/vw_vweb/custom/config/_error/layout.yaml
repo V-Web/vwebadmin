@@ -1,0 +1,338 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: home_-_particles
+  timestamp: 1478601969
+layout:
+  /navigation/:
+    -
+      - 'logo-9608 25'
+      - 'menu-6409 75'
+  /header/: {  }
+  /breadcrumbs/: {  }
+  /services/:
+    -
+      - 'position-services-b 33'
+      - 'position-services-c 33'
+      - 'position-services-d 34'
+  /intro/:
+    -
+      - 'position-intro-a 25'
+      - 'position-intro-b 25'
+      - 'position-intro-c 25'
+      - 'position-intro-d 25'
+  /maintenance/:
+    -
+      - 'position-maintenance-a 25'
+      - 'position-maintenance-b 25'
+      - 'position-maintenance-c 25'
+      - 'position-maintenance-d 25'
+  /portfolio/:
+    -
+      - 'position-portfolio-a 25'
+      - 'position-portfolio-b 25'
+      - 'position-portfolio-c 25'
+      - 'position-portfolio-d 25'
+  /container-main/:
+    -
+      -
+        'mainbar 75':
+          -
+            - position-illustration-top-1300
+          -
+            - 'position-article-top-a 50'
+            - 'position-article-top-b 50'
+          -
+            - 'position-article-bottom-a 50'
+            - 'position-article-bottom-b 50'
+          -
+            - 'position-article-bottom-c 50'
+            - 'position-article-bottom-d 50'
+          -
+            - custom-8693
+      -
+        'sidebar 25':
+          -
+            - position-sidebar-1400
+          -
+            - position-sidebottom
+  /maps/:
+    -
+      - position-googlemaps
+  /quote1/:
+    -
+      - position-quote-1
+  /features/:
+    -
+      - 'position-features-a 25'
+      - 'position-features-b 25'
+      - 'position-features-c 25'
+      - 'position-features-d 25'
+  /quote2/:
+    -
+      - position-quote-2
+  /utility/:
+    -
+      - 'position-utility-a 25'
+      - 'position-utility-b 25'
+      - 'position-utility-c 25'
+      - 'position-utility-d 25'
+  /quote3/:
+    -
+      - position-quote-3
+  /mainbottom/:
+    -
+      - 'position-mainbottom-a 25'
+      - 'position-mainbottom-b 25'
+      - 'position-mainbottom-c 25'
+      - 'position-mainbottom-d 25'
+  /footer/:
+    -
+      - 'position-footer-a 33'
+      - 'position-footer-b 48'
+      - 'position-footer-c 19'
+  /copyright/:
+    -
+      - 'copyright-8211 50'
+      - 'horizontalmenu-9034 50'
+  /offcanvas/:
+    -
+      - mobile-menu-5697
+structure:
+  navigation:
+    type: section
+    attributes:
+      boxed: ''
+  header:
+    title: Slider
+    attributes:
+      boxed: ''
+      class: g-flushed
+  breadcrumbs:
+    type: section
+    attributes:
+      boxed: ''
+  services:
+    type: section
+    attributes:
+      boxed: ''
+  intro:
+    type: section
+    attributes:
+      boxed: ''
+  maintenance:
+    type: section
+    attributes:
+      boxed: ''
+  portfolio:
+    type: section
+    attributes:
+      boxed: ''
+  mainbar:
+    type: section
+    subtype: main
+  sidebar:
+    type: section
+    subtype: aside
+  container-main:
+    attributes:
+      boxed: ''
+  maps:
+    type: section
+    title: Location
+    attributes:
+      boxed: ''
+      class: g-flushed
+  quote1:
+    type: section
+    attributes:
+      boxed: ''
+  features:
+    type: section
+    attributes:
+      boxed: ''
+  quote2:
+    type: section
+    attributes:
+      boxed: ''
+  utility:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+  quote3:
+    type: section
+    attributes:
+      boxed: ''
+  mainbottom:
+    type: section
+    attributes:
+      boxed: ''
+  footer:
+    attributes:
+      boxed: ''
+  copyright:
+    type: section
+    attributes:
+      boxed: ''
+  offcanvas:
+    attributes:
+      boxed: ''
+content:
+  logo-9608:
+    title: 'V-Web Logo'
+    block:
+      class: vweb-logo
+  menu-6409:
+    title: 'V-Web Menu'
+    block:
+      class: vweb-menu
+  position-services-b:
+    attributes:
+      key: services-b
+  position-services-c:
+    attributes:
+      key: services-c
+  position-services-d:
+    attributes:
+      key: services-d
+  position-intro-a:
+    attributes:
+      key: intro-a
+  position-intro-b:
+    attributes:
+      key: intro-b
+  position-intro-c:
+    attributes:
+      key: intro-c
+  position-intro-d:
+    attributes:
+      key: intro-d
+  position-maintenance-a:
+    attributes:
+      key: maintenance-a
+  position-maintenance-b:
+    attributes:
+      key: maintenance-b
+  position-maintenance-c:
+    attributes:
+      key: maintenance-c
+  position-maintenance-d:
+    attributes:
+      key: maintenance-d
+  position-portfolio-a:
+    attributes:
+      key: portfolio-a
+  position-portfolio-b:
+    attributes:
+      key: portfolio-b
+  position-portfolio-c:
+    attributes:
+      key: portfolio-c
+  position-portfolio-d:
+    attributes:
+      key: portfolio-d
+  position-illustration-top-1300:
+    attributes:
+      key: illustration-top-1300
+  position-article-top-a:
+    attributes:
+      key: article-top-a
+  position-article-top-b:
+    attributes:
+      key: article-top-b
+  position-article-bottom-a:
+    attributes:
+      key: article-bottom-a
+  position-article-bottom-b:
+    attributes:
+      key: article-bottom-b
+  position-article-bottom-c:
+    attributes:
+      key: article-bottom-c
+  position-article-bottom-d:
+    attributes:
+      key: article-bottom-d
+  custom-8693:
+    title: 'Custom HTML'
+    attributes:
+      html: "<h1>Oeps...<h1>\n<h2>Er is iets niet volgens plan gegaan!</h2>\n<p>We helpen u graag weer snel op weg! <a href=\"/\">Keer terug naar de homepage</a></p>\n<h2>Goed nieuws!</h2>\n<p>We hebben dit foutje automatisch geregistreerd en gaan dit direct oplossen</p>"
+  position-sidebar-1400:
+    attributes:
+      key: sidebar-1400
+  position-sidebottom:
+    attributes:
+      key: sidebottom
+  position-googlemaps:
+    attributes:
+      key: googlemaps
+  position-quote-1:
+    attributes:
+      key: quote-1
+  position-features-a:
+    attributes:
+      key: features-a
+  position-features-b:
+    attributes:
+      key: features-b
+  position-features-c:
+    attributes:
+      key: features-c
+  position-features-d:
+    attributes:
+      key: features-d
+  position-quote-2:
+    attributes:
+      key: quote-2
+  position-utility-a:
+    attributes:
+      key: utility-a
+  position-utility-b:
+    attributes:
+      key: utility-b
+  position-utility-c:
+    attributes:
+      key: utility-c
+  position-utility-d:
+    attributes:
+      key: utility-d
+  position-quote-3:
+    attributes:
+      key: quote-3
+  position-mainbottom-a:
+    attributes:
+      key: mainbottom-a
+  position-mainbottom-b:
+    attributes:
+      key: mainbottom-b
+  position-mainbottom-c:
+    attributes:
+      key: mainbottom-c
+  position-mainbottom-d:
+    attributes:
+      key: mainbottom-d
+  position-footer-a:
+    attributes:
+      key: footer-a
+  position-footer-b:
+    attributes:
+      key: footer-b
+  position-footer-c:
+    attributes:
+      key: footer-c
+  horizontalmenu-9034:
+    title: 'Horizontal Menu'
+    attributes:
+      items:
+        -
+          text: 'Algemene Voorwaarden'
+          link: /algemene-voorwaarden
+          name: 'Algemene Voorwaarden'
+        -
+          text: 'Privacy Policy'
+          link: /privacy-policy
+          name: 'Privacy Policy'
+        -
+          text: 'Cookie Policy'
+          link: /cookie-policy
+          name: 'Cookie Policy'

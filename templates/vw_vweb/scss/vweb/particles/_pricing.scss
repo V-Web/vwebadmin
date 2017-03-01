@@ -1,0 +1,198 @@
+// Set the variable defaults in case they are missing in the template
+$fontsizes-body-font-size: 1rem !default;
+$base-element-color: #f8f8f8 !default;
+
+.g-pricing-tables {
+	text-align: center;
+	&:not(.gutter-disabled) {
+		margin-left: -($content-padding);
+		margin-right: -($content-padding);
+	}
+	.g-pricing-table {
+		@include breakpoint(mobile-only) {
+			margin-bottom: 30px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.g-content {
+		margin: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.g-pricing-table-inner {
+		margin: 0;
+		border: 1px solid $base-border-color;
+		list-style: none;
+		border-radius: 3px;
+		background: #ffffff;
+	}
+	h4, h3 {
+		margin: 0;
+	}
+	.g-table-title {
+		padding: 25px 20px;
+	}
+	.g-table-price {
+		padding: 30px 20px;
+		font-size: $fontsizes-body-font-size*2.3;
+		background: $accent-color-1;
+		color: #ffffff;
+		.vanaf {
+		    font-size: 0.8rem;
+		}
+	}
+	.g-table-item {
+		padding: 13px 20px;
+		@include breakpoint (no-desktop) {
+			padding: 18px 20px;
+		}
+		border-bottom: 1px solid $base-border-color;
+		font-size: 0.9rem;
+		max-height: 61px;
+		min-height: 52px;
+		i {
+			font-size: 1.2rem;
+		}
+		.fa.fa-check-circle-o {
+		    color: #00b61a;
+		}
+		.fa.fa-close {
+			color: #cc0000;
+		}
+		&.pricing-yearly {
+		    background: lighten($accent-color-2,12%);
+		    color: #fff;
+		    font-weight: bold;
+		}
+		&.pricing-discount {
+			background: lighten($accent-color-1,25%)!important;
+			color: #fff;
+			font-weight: bold;
+		}
+	}
+	.pricing-description {
+		.g-table-item {
+			font-size: 0.9rem;
+		}
+	}
+	.g-table-button {
+		padding: 25px 20px;
+		i {
+			margin-right: 10px;
+		}
+	}
+	&.style1 {
+		.featured-table {
+			h4 {
+				font-size: $fontsizes-body-font-size*1.5;
+				line-height: 1.5rem;
+			}
+			.g-pricing-table-inner {
+				box-shadow: 0 0 4px rgba(0, 0, 0, 0.09);
+			}
+		}
+	}
+	&.gutter-disabled {
+		> .g-grid { 
+			border: 0px solid $base-border-color;
+			border-radius: 3px;
+			@include breakpoint(mobile-only) {
+				border: none;
+			}
+		}
+		.g-pricing-table-inner {
+			border: none;
+			border-right: 0px solid $base-border-color;
+			border-radius: 0;
+			@include breakpoint(mobile-only) {
+				border: 1px solid $base-border-color;
+			}
+		}
+		&.style1 {
+			.featured-table {
+				.g-pricing-table-inner {
+					box-shadow: none;
+				}
+				h4 {
+					line-height: 1.55rem;
+				}
+			}
+		}
+		.g-pricing-table {
+			&:last-child {
+				.g-pricing-table-inner {
+					border-right: none;
+					@include breakpoint(mobile-only) {
+						border-right: 1px solid $base-border-color;
+					}
+				}
+			}
+		}
+	}
+	&.style2 {
+		.g-table-head {
+			padding: 30px 20px;
+			border-bottom: 1px solid $base-border-color;
+			@include breakpoint(desktop-only){
+				min-height: 192px;
+			}
+		}
+		.g-table-title {
+			padding: 0 20px;
+			margin-bottom: 10px;
+			h4 {
+				font-size: $fontsizes-body-font-size*1.7;
+				font-weight: normal;
+				text-transform: uppercase;
+			}
+		}
+		.g-table-item {
+			&:nth-child(even) {
+				background: $base-element-color;
+			}
+		}
+		.g-table-price {
+			background: none;
+			color: $accent-color-1;
+			padding: 0 20px;
+			font-size: $fontsizes-body-font-size*2;
+			font-weight: bold;
+		}
+		.featured-table {
+			.g-table-head {
+				background: $accent-color-1;
+				color: #ffffff;
+			}
+			.g-table-title {
+				h4 {
+					color: #ffffff !important;
+				}
+			}
+			.g-table-price {
+				color: #ffffff;
+			}
+		}
+	}
+}
+@include breakpoint (desktop-only) {
+	.g-pricing-table {
+		min-height: 192px;
+		&.pricing-body {
+			.pricing-text, .price-prefix {
+			    display: none;
+			}
+		}
+	}
+}
+@include breakpoint (no-desktop) {
+	.g-pricing-table {
+		&.pricing-description {
+			display: none;
+		}
+		.pricing-icon {
+			margin-left: 0.538rem;
+		}
+	}
+}

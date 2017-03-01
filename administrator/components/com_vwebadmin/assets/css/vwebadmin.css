@@ -1,0 +1,122 @@
+.icon-48-klanten {
+      background-image: url(../images/l_klanten.png);
+      padding-left:60px!important;
+}
+
+.icon-48-klant {
+      background-image: url(../images/l_klanten.png);
+      padding-left:60px!important;
+}
+
+.color-box-klanten { 
+      float: left;      width: 15px;      height: 15px;      margin-right: 5px;      border: 1px solid rgba(0, 0, 0, .2);}
+
+.icon-48-websites {
+      background-image: url(../images/l_websites.png);
+      padding-left:60px!important;
+}
+
+.icon-48-website {
+      background-image: url(../images/l_websites.png);
+      padding-left:60px!important;
+}
+
+.color-box-websites { 
+      float: left;      width: 15px;      height: 15px;      margin-right: 5px;      border: 1px solid rgba(0, 0, 0, .2);}
+
+.icon-48-cmstypen {
+      background-image: url(../images/l_cmstypen.png);
+      padding-left:60px!important;
+}
+
+.icon-48-cmstype {
+      background-image: url(../images/l_cmstypen.png);
+      padding-left:60px!important;
+}
+
+.color-box-cmstypen { 
+      float: left;      width: 15px;      height: 15px;      margin-right: 5px;      border: 1px solid rgba(0, 0, 0, .2);}
+
+.icon-48-cmsversies {
+      background-image: url(../images/l_cmsversies.png);
+      padding-left:60px!important;
+}
+
+.icon-48-cmsversie {
+      background-image: url(../images/l_cmsversies.png);
+      padding-left:60px!important;
+}
+
+.color-box-cmsversies { 
+      float: left;      width: 15px;      height: 15px;      margin-right: 5px;      border: 1px solid rgba(0, 0, 0, .2);}
+
+.icon-48-onderhouds {
+      background-image: url(../images/l_onderhouds.png);
+      padding-left:60px!important;
+}
+
+.icon-48-onderhoud {
+      background-image: url(../images/l_onderhouds.png);
+      padding-left:60px!important;
+}
+
+.color-box-onderhouds { 
+      float: left;      width: 15px;      height: 15px;      margin-right: 5px;      border: 1px solid rgba(0, 0, 0, .2);}
+
+.icon-48-onderhoudspakketten {
+      background-image: url(../images/l_onderhoudspakketten.png);
+      padding-left:60px!important;
+}
+
+.icon-48-onderhoudspakket {
+      background-image: url(../images/l_onderhoudspakketten.png);
+      padding-left:60px!important;
+}
+
+.color-box-onderhoudspakketten { 
+      float: left;      width: 15px;      height: 15px;      margin-right: 5px;      border: 1px solid rgba(0, 0, 0, .2);}
+
+.icon-48-hostings {
+      background-image: url(../images/l_hostings.png);
+      padding-left:60px!important;
+}
+
+.icon-48-hosting {
+      background-image: url(../images/l_hostings.png);
+      padding-left:60px!important;
+}
+
+.color-box-hostings { 
+      float: left;      width: 15px;      height: 15px;      margin-right: 5px;      border: 1px solid rgba(0, 0, 0, .2);}
+
+.icon-48-hostingpakketten {
+      background-image: url(../images/l_hostingpakketten.png);
+      padding-left:60px!important;
+}
+
+.icon-48-pakket {
+      background-image: url(../images/l_hostingpakketten.png);
+      padding-left:60px!important;
+}
+
+.color-box-hostingpakketten { 
+      float: left;      width: 15px;      height: 15px;      margin-right: 5px;      border: 1px solid rgba(0, 0, 0, .2);}
+
+.icon-48-domeinen {
+      background-image: url(../images/l_domeinen.png);
+      padding-left:60px!important;
+}
+
+.icon-48-domein {
+      background-image: url(../images/l_domeinen.png);
+      padding-left:60px!important;
+}
+
+.color-box-domeinen { 
+      float: left;      width: 15px;      height: 15px;      margin-right: 5px;      border: 1px solid rgba(0, 0, 0, .2);}
+
+
+
+.other-filters{
+    padding: 0 14px;
+}

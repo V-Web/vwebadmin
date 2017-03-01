@@ -1,0 +1,20 @@
+#g-above {
+    background: $above-background;
+    color: $above-text-color;
+    padding: $section-padding 0;
+}
+
+#g-maps {
+	background: #E6E6E6 none repeat scroll 0 0;
+	h3 {
+	    color: #312F38;
+	    margin: 0.5rem 0 0.5rem;
+	    text-align: center;
+	}
+}
+@media print {
+    #g-above {
+        background: #fff !important;
+        color: #000 !important;
+    }
+}

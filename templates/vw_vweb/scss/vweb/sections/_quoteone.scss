@@ -1,0 +1,13 @@
+#g-quoteone {
+    background: $quoteone-background url($quoteone-background-image) center center no-repeat;
+    background-size: cover;
+    color: $quoteone-text-color;
+    padding: 1rem 0;
+}
+
+@media print {
+    #g-quoteone {
+        background: #fff !important;
+        color: #000 !important;
+    }
+}

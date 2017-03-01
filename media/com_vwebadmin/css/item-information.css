@@ -1,0 +1,15 @@
+
+/* DATE INFORMATION IN DASHBOARD */
+.datefrom {
+    color: #00a7ec;
+    font-size: 0.8rem;
+}
+.extended {
+	font-size: 0.8rem;
+	text-align: center;
+}
+.dateto {
+    color: #0c4e85;
+    font-size: 0.8rem;
+    text-align: right;
+}

@@ -1,0 +1,112 @@
+<?php
+
+/**
+ * @version    CVS: 1.0.20
+ * @package    Com_Vwebadmin
+ * @author     Marcel Venema <marcel.venema@v-web.nl>
+ * @copyright  2017 V-Web.nl
+ * @license    GNU General Public License versie 2 of hoger; Zie LICENSE.txt
+ */
+// No direct access
+defined('_JEXEC') or die;
+
+jimport('joomla.application.component.view');
+
+/**
+ * View to edit
+ *
+ * @since  1.6
+ */
+class VwebadminViewWebsite extends JViewLegacy
+{
+	protected $state;
+
+	protected $item;
+
+	protected $form;
+
+	/**
+	 * Display the view
+	 *
+	 * @param   string  $tpl  Template name
+	 *
+	 * @return void
+	 *
+	 * @throws Exception
+	 */
+	public function display($tpl = null)
+	{
+		$this->state = $this->get('State');
+		$this->item  = $this->get('Item');
+		$this->form  = $this->get('Form');
+
+		// Check for errors.
+		if (count($errors = $this->get('Errors')))
+		{
+			throw new Exception(implode("\n", $errors));
+		}
+
+		$this->addToolbar();
+		parent::display($tpl);
+	}
+
+	/**
+	 * Add the page title and toolbar.
+	 *
+	 * @return void
+	 *
+	 * @throws Exception
+	 */
+	protected function addToolbar()
+	{
+		JFactory::getApplication()->input->set('hidemainmenu', true);
+
+		$user  = JFactory::getUser();
+		$isNew = ($this->item->id == 0);
+
+		if (isset($this->item->checked_out))
+		{
+			$checkedOut = !($this->item->checked_out == 0 || $this->item->checked_out == $user->get('id'));
+		}
+		else
+		{
+			$checkedOut = false;
+		}
+
+		$canDo = VwebadminHelpersVwebadmin::getActions();
+
+		JToolBarHelper::title(JText::_('COM_VWEBADMIN_TITLE_WEBSITE'), 'website.png');
+
+		// If not checked out, can save the item.
+		if (!$checkedOut && ($canDo->get('core.edit') || ($canDo->get('core.create'))))
+		{
+			JToolBarHelper::apply('website.apply', 'JTOOLBAR_APPLY');
+			JToolBarHelper::save('website.save', 'JTOOLBAR_SAVE');
+		}
+
+		if (!$checkedOut && ($canDo->get('core.create')))
+		{
+			JToolBarHelper::custom('website.save2new', 'save-new.png', 'save-new_f2.png', 'JTOOLBAR_SAVE_AND_NEW', false);
+		}
+
+		// If an existing item, can save to a copy.
+		if (!$isNew && $canDo->get('core.create'))
+		{
+			JToolBarHelper::custom('website.save2copy', 'save-copy.png', 'save-copy_f2.png', 'JTOOLBAR_SAVE_AS_COPY', false);
+		}
+
+		// Button for version control
+		if ($this->state->params->get('save_history', 1) && $user->authorise('core.edit')) {
+			JToolbarHelper::versions('com_vwebadmin.website', $this->item->id);
+		}
+
+		if (empty($this->item->id))
+		{
+			JToolBarHelper::cancel('website.cancel', 'JTOOLBAR_CANCEL');
+		}
+		else
+		{
+			JToolBarHelper::cancel('website.cancel', 'JTOOLBAR_CLOSE');
+		}
+	}
+}

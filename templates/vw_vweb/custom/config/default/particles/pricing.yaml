@@ -1,0 +1,9 @@
+enabled: '1'
+mainheading: ''
+introtext: ''
+style: style1
+gutter: enabled
+css:
+  class: ''
+extra: {  }
+items: {  }

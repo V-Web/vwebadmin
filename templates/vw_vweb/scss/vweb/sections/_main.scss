@@ -1,0 +1,16 @@
+#g-mainbar {
+    background: $base-background;
+    color: $base-text-color;
+    padding: ($section-padding - 2.5rem) 0;
+    .g-content {
+    	margin: 0 0.938rem 0.938rem;
+    	padding: 0 0.625rem 0.625rem;
+    }
+}
+
+@media print {
+	#g-main {
+		background: #fff !important;
+		color: #000 !important;
+	}
+}

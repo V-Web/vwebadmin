@@ -1,0 +1,51 @@
+meta: {  }
+head_bottom: ''
+atoms:
+  -
+    type: frameworks
+    title: 'JavaScript Frameworks'
+    attributes:
+      enabled: '1'
+      jquery:
+        enabled: '1'
+        ui_core: '0'
+        ui_sortable: '0'
+      bootstrap:
+        enabled: '0'
+      mootools:
+        enabled: '0'
+        more: '0'
+    id: frameworks-9745
+  -
+    id: uikit-1035
+    type: uikit
+    title: 'UIkit for Gantry5'
+    attributes:
+      enabled: '1'
+      jslocation: head
+  -
+    id: headroom-6974
+    type: headroom
+    title: Headroom.js
+    attributes:
+      enabled: '1'
+      cssselector: '#g-navigation'
+      offset: '133'
+      animation: slide
+      mobile: disable
+  -
+    id: scrollreveal-js-5102
+    type: scrollreveal-js
+    title: ScrollReveal.js
+    attributes:
+      enabled: '1'
+      mobile: 'false'
+  -
+    id: assets-7392
+    type: assets
+    title: 'Custom CSS / JS'
+    attributes:
+      enabled: '1'
+      css: {  }
+      javascript:
+        - { location: '', inline: "\nwindow.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=\nd.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.\n_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute(\"charset\",\"utf-8\");\n$.src=\"//v2.zopim.com/?4MpCGtoSN28LRPwfkpTsYPZykZPPu0D1\";z.t=+new Date;$.\ntype=\"text/javascript\";e.parentNode.insertBefore($,e)})(document,\"script\");", in_footer: '0', extra: {  }, priority: '0', name: 'Zopim Chat' }

@@ -1,0 +1,9 @@
+enabled: '1'
+date:
+  start: '2010'
+  end: now
+owner: 'V-Web.nl'
+link: ''
+target: _blank
+css:
+  class: ''

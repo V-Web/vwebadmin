@@ -1,0 +1,177 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% set attr_extra = '' %}
+{% if particle.extra %}
+    {% for attributes in particle.extra %}
+        {% for key, value in attributes %}
+            {% set attr_extra = attr_extra ~ ' ' ~ key|e ~ '="' ~ value|e('html_attr') ~ '"' %}
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+
+{% set particleheading %}
+	<div class="g-particle-intro">
+		{% if particle.mainheading %}
+			<h3 class="g-title g-main-title">{{ particle.mainheading|raw }}</h3>
+			<div class="g-title-separator {% if particle.introtext == false %}no-intro-text{% endif %}"></div>
+		{% endif %}	
+		{% if particle.introtext %}<p class="g-introtext">{{ particle.introtext|raw }}</p>{% endif %}
+	</div>
+{% endset %}
+
+{% set feedbackitemsstatic %}
+	{% for item in particle.items %}
+		{% set attr_extra_item = '' %}
+		{% for extra in item.extra %}
+			{% set attr_extra_item = attr_extra_item ~ ' ' ~ extra|keys|first|e ~ '="' ~ extra|values|first|e('html_attr') ~ '"' %}
+		{% endfor %}
+
+		{% set style1 %}
+			<div class="g-block{% if item.class %} {{ item.class|e }}{% endif %}" {% if item.extra %}{{ attr_extra_item|raw }}{% endif %}>
+				<div class="g-content">
+					<div class="g-feedback-item">
+						{% if item.feedback %}<div class="g-feedback-text">
+							{{ item.feedback|raw }}
+						</div>{% endif %}
+						{% if item.customername or item.image %}<div class="g-user-info clearfix">
+							{% if item.image %}<span class="g-user-image"><img alt="{{ item.alt|e }}" src="{{ url(item.image) }}" {{ item.image|imagesize|raw }}></span>{% endif %}
+							{% if item.customername or item.position or item.company %}<div class="g-user-details">
+								{% if item.customername %}<div class="g-user-name">{{ item.customername|e }}</div>{% endif %}
+								{% if item.position or item.company %}<div class="g-user-company">{% if item.position %}{{ item.position|e }}{% if item.company and item.position %} {{ item.wordconnector|e }} {% endif %}{% if item.company %}{% if item.companylink %}<a target="{{ item.target|default('_parent')|e }}" href="{{ item.companylink|e }}">{% endif %}{{ item.company|e }}{% if item.companylink %}</a>{% endif %}{% endif %}{% endif %}</div>{% endif %}
+							</div>{% endif %}
+						</div>{% endif %}
+					</div>
+				</div>
+			</div>
+		{% endset %}
+
+		{% set style2 %}
+			<div class="g-block{% if item.class %} {{ item.class|e }}{% endif %}" {% if item.extra %}{{ attr_extra_item|raw }}{% endif %}>
+				<div class="g-content">
+					<div class="g-feedback-item">
+						{% if item.feedback %}
+							<div class="g-feedback-text">
+								{{ item.feedback|raw }}
+							</div>
+							<div class="g-feedback-separator"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+						{% endif %}
+						{% if item.customername or item.image %}<div class="g-user-info clearfix">
+							{% if item.image %}<span class="g-user-image"><img alt="{{ item.alt|e }}" src="{{ url(item.image) }}" {{ item.image|imagesize|raw }}></span>{% endif %}
+							{% if item.customername or item.position or item.company %}<div class="g-user-details">
+								{% if item.customername %}<div class="g-user-name">{{ item.customername|e }}</div>{% endif %}
+								{% if item.position or item.company %}<div class="g-user-company">{% if item.position %}{{ item.position|e }}{% if item.company and item.position %} {{ item.wordconnector|e }} {% endif %}{% if item.company %}{% if item.companylink %}<a target="{{ item.target|default('_parent')|e }}" href="{{ item.companylink|e }}">{% endif %}{{ item.company|e }}{% if item.companylink %}</a>{% endif %}{% endif %}{% endif %}</div>{% endif %}
+							</div>{% endif %}
+						</div>{% endif %}
+					</div>
+				</div>
+			</div>
+		{% endset %}
+
+		{% if particle.style|default("style1") == "style1" %}{{ style1 }}{% endif %}
+		{% if particle.style|default("style1") == "style2" %}{{ style2 }}{% endif %}
+
+	{% endfor %}
+{% endset %}
+
+{% set feedbackitems %}
+	{% for item in particle.items %}
+		{% set attr_extra_item = '' %}
+		{% for extra in item.extra %}
+			{% set attr_extra_item = attr_extra_item ~ ' ' ~ extra|keys|first|e ~ '="' ~ extra|values|first|e('html_attr') ~ '"' %}
+		{% endfor %}
+
+		{% set style1 %}
+			<li {% if item.class %}class="{{ item.class|e }}"{% endif %} {% if item.extra %}{{ attr_extra_item|raw }}{% endif %}>							        	
+				<div class="g-feedback-item">
+					{% if item.feedback %}<div class="g-feedback-text">
+						{{ item.feedback|raw }}
+					</div>{% endif %}
+					{% if item.customername or item.image %}<div class="g-user-info clearfix">
+						{% if item.image %}<span class="g-user-image"><img alt="{{ item.alt|e }}" src="{{ url(item.image) }}" {{ item.image|imagesize|raw }}></span>{% endif %}
+						{% if item.customername or item.position or item.company %}<div class="g-user-details">
+							{% if item.customername %}<div class="g-user-name">{{ item.customername|e }}</div>{% endif %}
+							{% if item.position or item.company %}<div class="g-user-company">{% if item.position %}{{ item.position|e }}{% if item.company and item.position %} {{ item.wordconnector|e }} {% endif %}{% if item.company %}{% if item.companylink %}<a target="{{ item.target|default('_parent')|e }}" href="{{ item.companylink|e }}">{% endif %}{{ item.company|e }}{% if item.companylink %}</a>{% endif %}{% endif %}{% endif %}</div>{% endif %}
+						</div>{% endif %}
+					</div>{% endif %}
+				</div>
+			</li>
+		{% endset %}
+
+		{% set style2 %}
+			<li {% if item.class %}class="{{ item.class|e }}"{% endif %} {% if item.extra %}{{ attr_extra_item|raw }}{% endif %}>							        	
+				<div class="g-feedback-item">
+					{% if item.feedback %}
+						<div class="g-feedback-text">
+							{{ item.feedback|raw }}
+						</div>
+						<div class="g-feedback-separator"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+					{% endif %}
+					{% if item.customername or item.image %}<div class="g-user-info clearfix">
+						{% if item.image %}<span class="g-user-image"><img alt="{{ item.alt|e }}" src="{{ url(item.image) }}" {{ item.image|imagesize|raw }}></span>{% endif %}
+						{% if item.customername or item.position or item.company %}<div class="g-user-details">
+							{% if item.customername %}<div class="g-user-name">{{ item.customername|e }}</div>{% endif %}
+							{% if item.position or item.company %}<div class="g-user-company">{% if item.position %}{{ item.position|e }}{% if item.company and item.position %} {{ item.wordconnector|e }} {% endif %}{% if item.company %}{% if item.companylink %}<a target="{{ item.target|default('_parent')|e }}" href="{{ item.companylink|e }}">{% endif %}{{ item.company|e }}{% if item.companylink %}</a>{% endif %}{% endif %}{% endif %}</div>{% endif %}
+						</div>{% endif %}
+					</div>{% endif %}
+				</div>
+			</li>
+		{% endset %}
+
+		{% if particle.style|default("style1") == "style1" %}{{ style1 }}{% endif %}
+		{% if particle.style|default("style1") == "style2" %}{{ style2 }}{% endif %}
+
+	{% endfor %}
+{% endset %}
+
+{% block particle %}
+	
+	{% if particle.behaviour|default('static') == 'static' %}
+		<div class="g-feedback{% if particle.css.class %} {{ particle.css.class|e }}{% endif %} {{ particle.style|default("style1")|e }}" {% if particle.extra %}{{ attr_extra|raw }}{% endif %}>
+			{% if particle.mainheading or particle.introtext %}
+				{{ particleheading }}
+			{% endif %}
+			<div class="g-grid">
+				{{ feedbackitemsstatic }}
+			</div>
+		</div>
+	{% endif %}
+	{% if particle.behaviour|default('static') == 'slider' %}
+		<div class="g-feedback-slider{% if particle.css.class %} {{ particle.css.class|e }}{% endif %} {{ particle.style|default("style1")|e }}" {% if particle.extra %}{{ attr_extra|raw }}{% endif %}>
+			{% if particle.mainheading or particle.introtext %}
+				{{ particleheading }}
+			{% endif %}	    	
+			<div class="uk-slidenav-position" data-uk-slider{% if particle.autoplay|default("disable") == "enable" %}="{autoplay:true}"{% endif %}>
+				<div class="uk-slider-container">
+					<ul class="uk-slider uk-grid uk-grid-width-medium-1-{{ particle.columns|default('3')|e }}">
+						{{ feedbackitems }}
+					</ul>
+				</div>
+				{% if (particle.navigation|default('dots') == 'arrows') or (particle.navigation|default('dots') == 'both') %}<a href="" class="uk-slidenav uk-slidenav-previous" data-uk-slider-item="previous"></a>{% endif %}
+				{% if (particle.navigation|default('dots') == 'arrows') or (particle.navigation|default('dots') == 'both') %}<a href="" class="uk-slidenav uk-slidenav-next" data-uk-slider-item="next"></a>{% endif %}
+			</div>		    	
+		</div>
+	{% endif %}
+	{% if particle.behaviour|default('static') == 'slideset' %}
+		<div class="g-feedback-slideset{% if particle.css.class %} {{ particle.css.class|e }}{% endif %} {{ particle.style|default("style1")|e }}" {% if particle.extra %}{{ attr_extra|raw }}{% endif %}>
+			{% if particle.mainheading or particle.introtext %}
+				{{ particleheading }}
+			{% endif %}	    	
+			<div class="uk-slidenav-position" data-uk-slideset="{small: 1, medium: {{ particle.columns|default('3')|e }}, large: {{ particle.columns|default('3')|e }}, duration: {{ particle.duration|default(200)|e}}, {% if particle.autoplay|default("disable") == "enable" %}autoplay: 'true',{% endif %} animation: '{{ particle.animation|default('fade')|e}}'}">
+				<div class="uk-slider-container">
+					<ul class="uk-slideset uk-grid">
+						{{ feedbackitems }}
+					</ul>
+				</div>
+				{% if (particle.navigation|default('dots') == 'arrows') or (particle.navigation|default('dots') == 'both') %}<a href="" class="uk-slidenav uk-slidenav-previous" data-uk-slideset-item="previous"></a>{% endif %}
+				{% if (particle.navigation|default('dots') == 'arrows') or (particle.navigation|default('dots') == 'both') %}<a href="" class="uk-slidenav uk-slidenav-next" data-uk-slideset-item="next"></a>{% endif %}
+				{% if (particle.navigation|default('dots') == 'dots') or (particle.navigation|default('dots') == 'both') %}<ul class="uk-slideset-nav uk-dotnav uk-flex-center">
+	    			{% set counter = 0 %}
+	    			{% for item in particle.items %}
+	    				<li data-uk-slideset-item="{{ counter }}"><a href=""></a></li>
+	    				{% set counter = counter + 1 %}
+	    			{% endfor %}
+				</ul>{% endif %}
+			</div>    	
+		</div>
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,91 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% set attr_extra = '' %}
+{% if particle.extra %}
+    {% for attributes in particle.extra %}
+        {% for key, value in attributes %}
+            {% set attr_extra = attr_extra ~ ' ' ~ key|e ~ '="' ~ value|e('html_attr') ~ '"' %}
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+
+{% set particleheading %}
+	<div class="g-particle-intro">
+		{% if particle.mainheading %}
+			<h3 class="g-title g-main-title">{{ particle.mainheading|raw }}</h3>
+			<div class="g-title-separator {% if particle.introtext == false %}no-intro-text{% endif %}"></div>
+		{% endif %}	
+		{% if particle.introtext %}<p class="g-introtext">{{ particle.introtext|raw }}</p>{% endif %}
+	</div>
+{% endset %}
+
+{% block particle %}
+    <div class="g-pricing-tables {{ particle.style|default("style1")|e }}{% if particle.css.class %} {{ particle.css.class|e }}{% endif %}{% if particle.gutter|default('enabled') == 'enabled' %} gutter-enabled{% else %} gutter-disabled{% endif %}" {% if particle.extra %}{{ attr_extra|raw }}{% endif %}>
+		{% if particle.mainheading or particle.introtext %}
+			{{ particleheading }}
+		{% endif %}
+    	
+    	<div class="g-grid">
+	        {% for item in particle.items %}
+		       	{% set attr_extra_item = '' %}
+				{% for extra in item.extra %}
+					{% set attr_extra_item = attr_extra_item ~ ' ' ~ extra|keys|first|e ~ '="' ~ extra|values|first|e('html_attr') ~ '"' %}
+				{% endfor %}
+	        	<div class="g-block g-pricing-table{% if item.class %} {{ item.class|e }}{% endif %}{% if item.featured %} featured-table{% endif %}" {% if item.extra %}{{ attr_extra_item|raw }}{% endif %}>
+	        		<div {% if particle.gutter|default('enabled') == 'enabled' %}class="g-content"{% endif %}>
+	        			<div class="g-pricing-table-inner">
+	        					<div class="g-table-head pricing-table-header">
+			        				{% if item.title %}<div class="g-table-title"><h4>{{ item.title|raw }}</h4></div>{% endif %}
+			        				{% if item.price %}<div class="g-table-price">{{ item.price|raw }}</div>{% endif %}
+			        				{% if item.period %}<div class="g-table-period">{{ item.period|raw }}</div>{% endif %}
+	        					</div>
+	        				{% if item.item1 or item.item1icon or item.item2 or item.item2icon or item.item3 or item.item3icon or item.item4 or item.item4icon or item.item5 or item.item5icon or item.item6 or item.item6icon or item.item7 or item.item7icon or item.item8 or item.item8icon %}
+	        					<div class="g-table-body">
+			        				{% if item.item1 or item.item1icon %}<div class="g-table-item">{% if item.item1 %}<span class="first-row">{{ item.item1|raw }}</span>{% endif %}{% if item.item1icon %}<span class="pricing-icon first-row"><i class="{{ item.item1icon|e }}"></i></span>{% endif %}</div>{% endif %}
+			        				{% if item.item2 or item.item2icon %}<div class="g-table-item">{% if item.item2 %}<span class="pricing-text">{{ item.item2|raw }}</span>{% endif %}{% if item.item2icon %}<span class="pricing-icon"><i class="{{ item.item2icon|e }}"></i></span>{% endif %}</div>{% endif %}
+			        				{% if item.item3 or item.item3icon %}<div class="g-table-item">{% if item.item3 %}<span class="pricing-text">{{ item.item3|raw }}</span>{% endif %}{% if item.item3icon %}<span class="pricing-icon"><i class="{{ item.item3icon|e }}"></i></span>{% endif %}</div>{% endif %}
+			        				{% if item.item4 or item.item4icon %}<div class="g-table-item">{% if item.item4 %}<span class="pricing-text">{{ item.item4|raw }}</span>{% endif %}{% if item.item4icon %}<span class="pricing-icon"><i class="{{ item.item4icon|e }}"></i></span>{% endif %}</div>{% endif %}
+			        				{% if item.item5 or item.item5icon %}<div class="g-table-item">{% if item.item5 %}<span class="pricing-text">{{ item.item5|raw }}</span>{% endif %}{% if item.item5icon %}<span class="pricing-icon"><i class="{{ item.item5icon|e }}"></i></span>{% endif %}</div>{% endif %}
+			        				{% if item.item6 or item.item6icon %}<div class="g-table-item">{% if item.item6 %}<span class="pricing-text">{{ item.item6|raw }}</span>{% endif %}{% if item.item6icon %}<span class="pricing-icon"><i class="{{ item.item6icon|e }}"></i></span>{% endif %}</div>{% endif %}
+			        				{% if item.item7 or item.item7icon %}<div class="g-table-item">{% if item.item7 %}<span class="pricing-text">{{ item.item7|raw }}</span>{% endif %}{% if item.item7icon %}<span class="pricing-icon"><i class="{{ item.item7icon|e }}"></i></span>{% endif %}</div>{% endif %}
+			        				{% if item.item8 or item.item8icon %}<div class="g-table-item">{% if item.item8 %}<span class="pricing-text">{{ item.item8|raw }}</span>{% endif %}{% if item.item8icon %}<span class="pricing-icon"><i class="{{ item.item8icon|e }}"></i></span>{% endif %}</div>{% endif %}
+		        					{% if item.item9 or item.item9icon %}<div class="g-table-item pricing-yearly">{% if item.item9 %}<span class="first-row">{{ item.item9|raw }}</span>{% endif %}{% if item.item9icon %}<span class="pricing-icon first-row jaarlijks"><span class="price-prefix">{{ item.item9icon|e }}</span>{% endif %}</div>{% endif %}
+	        						{% if item.item10 or item.item10icon %}<div class="g-table-item pricing-discount">{% if item.item10 %}<span class="first-row">{{ item.item10|raw }}</span>{% endif %}{% if item.item10icon %}<span class="pricing-icon first-row korting"><span class="price-prefix">{{ item.item10icon|e }}</span>{% endif %}</div>{% endif %}
+			        			</div>
+			        		{% endif %}
+			        		{% if item.link or item.buttontext %}
+			        			<div class="g-table-button">
+			        				<a class="button {% if particle.style|default("style1") == 'style1' or (particle.style|default("style1") == 'style2' and item.featured == false) %} empty{% endif %}" target="{{ item.target|default('_parent')|e }}" href="{{ item.link|e }}">
+			        					{% if item.buttonicon %}<i class="{{ item.buttonicon|e }}"></i>{% endif %}{{ item.buttontext|e }}
+			        				</a>
+			        			</div>
+			        		{% endif %}
+	        			</div>
+		        	</div>
+	            </div>
+	        {% endfor %}
+    	</div>
+	</div>
+{% endblock %}
+{% block javascript_footer %}
+	{{ parent() }}
+	<script type="text/javascript">
+		(function($) {
+			
+			var $j = jQuery.noConflict();
+			function equalHeight(group) {
+			    tallest = 0;
+			    group.each(function() {
+			        thisHeight = $j(this).height();
+			        if(thisHeight > tallest) {
+			            tallest = thisHeight;
+			        }
+			    });
+			    group.height(tallest);
+			}
+			$j(window).load(function() {
+				equalHeight($j(".g-table-head.pricing-table-header"));
+			});
+		})(jQuery);
+	</script>
+{% endblock %}

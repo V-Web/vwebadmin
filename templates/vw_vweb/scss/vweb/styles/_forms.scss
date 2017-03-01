@@ -1,0 +1,101 @@
+textarea, select[multiple=multiple] {
+	background-color: white;
+	border: 1px solid $base-border-color;
+
+	&:hover {
+		border-color: $border-color-hover;
+        box-shadow: $base-box-shadow;
+	}
+
+	&:focus {
+		border-color: $border-color-focus;
+        box-shadow: $base-box-shadow;
+	}
+}
+
+textarea {
+	width: 100%;
+	box-sizing: border-box !important;
+    padding: 0.75rem 1.25rem;
+}
+
+select {
+	height: 42px!important;
+	padding: 0.375rem!important;
+	option {
+		padding: 0.375rem!important;
+	}
+}
+
+fieldset.input {
+	margin: 0;
+	padding: 0;
+}
+
+#{$all-text-inputs} {
+	background-color: white;
+	vertical-align: middle;
+	border: 1px solid $base-border-color;
+	font-size: $core-font-size;
+	width: 100%;
+	line-height: $core-line-height;
+    padding: 0.375rem 1.25rem;
+	@include transition(border-color 0.2s);
+
+    &:hover {
+        box-shadow: $base-box-shadow;
+    }
+
+    &:focus {
+        box-shadow: $base-box-shadow;
+    }
+}
+
+#{$all-text-inputs-hover} {
+	border-color: $border-color-hover;
+}
+
+#{$all-text-inputs-focus} {
+	border-color: $border-color-focus;
+}
+
+.bfQuickMode input[type="text"], .bfQuickMode textarea, .bfQuickMode select, .bfQuickMode .uneditable-input {
+	max-width: 100%!important;
+}
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+	box-sizing: border-box!important;
+}
+#bfQuickModeSection25079 {
+    box-sizing: border-box;
+    float: right;
+    width: 49% !important;
+}
+#bfQuickModeSection98376 {
+    box-sizing: inherit;
+    float: left;
+    padding-left: 0;
+    width: 49%;
+}
+button {
+	&#ff_elem125, &#ff_elem204, &#ff_elem372 {
+		background: $accent-color-2;
+		color: #fff;
+	    padding: 0.675rem !important;
+	    text-shadow: none;
+	    width: 100%;
+	}
+	&#ff_elem71 {
+		background: $accent-color-1;
+		color: #fff;
+	    padding: 0.675rem !important;
+	    text-shadow: none;
+	    width: 100%;
+	}
+}
+.maintenance-warning {
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    color: #cc0000;
+    font-size: 0.9rem;
+    padding: 0.538rem 0;
+}

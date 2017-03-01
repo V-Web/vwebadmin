@@ -1,0 +1,29 @@
+#g-quote1 {
+	
+}
+#g-quote2 {
+	background: $services-background url($services-background-image) center center no-repeat;
+	.offerte-button {
+	    background: $accent-color-1;
+	    border-radius: 0.248rem;
+	    padding: 0.348rem 0.596rem;
+	    text-align: center;
+	    a {
+	    	color: #fff;
+	    	&:hover {
+	    		color: #e9e9e9;
+	    		text-decoration: underline;
+	    	}
+	    }
+	}
+}
+#g-quote3 {
+	
+}
+
+@media print {
+    #g-above {
+        background: #fff !important;
+        color: #000 !important;
+    }
+}

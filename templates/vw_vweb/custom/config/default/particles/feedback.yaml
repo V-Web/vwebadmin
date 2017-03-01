@@ -1,0 +1,14 @@
+enabled: '1'
+mainheading: ''
+introtext: ''
+style: style1
+behaviour: static
+columns: '3'
+autoplay: disable
+navigation: dots
+animation: fade
+duration: '200'
+css:
+  class: ''
+extra: {  }
+items: {  }

@@ -1,0 +1,23 @@
+<h3>Translating the admin user interface without a 3rd party solution</h3>
+<p>
+	You can find the details about translating Joomla extension's user interface
+	<a href="https://extensionsforjoomla.com/documentations/how-to-translate-joomla-components-modules-into-other-languages" target="_blank">here</a>.
+</p>
+
+
+<h3>Creating multilingual sliders</h3>
+<p>
+You are able to translate your sliders in 2 ways. Both of them is a good solution, so you can choose the better one for your needs.
+</p>
+
+<h4>Translate slider by using language constants</h4>
+<p>
+As you probably know Joomla use the mentioned language constants in components and modules for labels, and notification texts. This mean that they add upper case text for the labels (mostly just a short form of text) and these constants are defined in the language files. There are many, which is defined in all language packs by default, like <i>JLOGIN</i> will be Login in case of English. But you can also create and add your custom ones, and then used them in your layers.<br />
+You only have to do is to select the Text button in the Content tab of the layer, and write your own constant there, like: <i>THIS_IS_MY_TEXT</i>. The Layer Slider will know that this text need to be replaced to the given value in the language files. So if you have this constant defined for example in English and German language files as well with the proper values, then this text will appear in the right language on your frontend.
+</p>
+
+<h4>Translate by duplicating slider</h4>
+<p>
+In this case you need to create your slider first for a language, like English, then duplicate that with the proper button of the slider list. After that change the strings in the other slider for the second language. When you are ready, save the slider.<br />
+Next you need to create modules for both sliders. In the module manager you can specify in case of which language will the module appear with the <strong>Language</strong> parameter.
+</p>

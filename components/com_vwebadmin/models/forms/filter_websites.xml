@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field name="search" type="text" hint="COM_VWEBADMIN_SEARCH_FILTER_SUBMIT"
+               label="COM_USERS_FILTER_SEARCH_DESC"
+               class="js-stools-search-string" />
+
+        <field name="owner" type="sql" label="COM_VWEBADMIN_FORM_LBL_WEBSITE_OWNER" query="SELECT '' AS `related_user_account`, 'COM_VWEBADMIN_WEBSITES_OWNER_FILTER' AS `val` UNION SELECT `related_user_account`, `company_name` AS val FROM `#__vwebadmin_customers`" key_field="related_user_account" value_field="val" class="inputbox" onchange="this.form.submit()" translate="true"/>
+
+
+    </fields>
+</form>

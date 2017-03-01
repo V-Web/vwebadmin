@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_vwebadmin</name>
+    <creationDate>2017-01-29</creationDate>
+    <copyright>2017 V-Web.nl</copyright>
+    <license>GNU General Public License versie 2 of hoger; Zie LICENSE.txt</license>
+    <author>Marcel Venema</author>
+    <authorEmail>info@v-web.nl</authorEmail>
+    <authorUrl>http://www.v-web.nl/</authorUrl>
+    <version>CVS: 1.0.22</version>
+    <description></description>
+    
+    <scriptfile>script.php</scriptfile>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <update> <!-- Runs on update -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/update.mysql.utf8.sql</file>
+        </sql>
+    </update>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>vwebadmin.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+    <media destination="com_vwebadmin" folder="media">
+        <folder>js</folder>
+        <folder>css</folder>
+    </media>
+    <languages folder="languages/site">
+        
+			<language tag="nl-NL">nl-NL/nl-NL.com_vwebadmin.ini</language>
+    </languages>
+    <administration>
+        <menu img="media/com_vwebadmin/images/s_com_vwebadmin.png" >COM_VWEBADMIN</menu>
+        <submenu>
+            
+			<menu link="option=com_vwebadmin&amp;view=klanten" view="klanten" img="media/com_vwebadmin/images/s_klanten.png" alt="Vwebadmin/Klanten">COM_VWEBADMIN_TITLE_KLANTEN</menu>
+
+			<menu link="option=com_vwebadmin&amp;view=websites" view="websites" img="media/com_vwebadmin/images/s_websites.png" alt="Vwebadmin/Websites">COM_VWEBADMIN_TITLE_WEBSITES</menu>
+
+			<menu link="option=com_vwebadmin&amp;view=cmstypen" view="cmstypen" img="media/com_vwebadmin/images/s_cmstypen.png" alt="Vwebadmin/Cmstypen">COM_VWEBADMIN_TITLE_CMSTYPEN</menu>
+
+			<menu link="option=com_vwebadmin&amp;view=cmsversies" view="cmsversies" img="media/com_vwebadmin/images/s_cmsversies.png" alt="Vwebadmin/Cmsversies">COM_VWEBADMIN_TITLE_CMSVERSIES</menu>
+
+			<menu link="option=com_vwebadmin&amp;view=onderhouds" view="onderhouds" img="media/com_vwebadmin/images/s_onderhouds.png" alt="Vwebadmin/Onderhouds">COM_VWEBADMIN_TITLE_ONDERHOUDS</menu>
+
+			<menu link="option=com_vwebadmin&amp;view=onderhoudspakketten" view="onderhoudspakketten" img="media/com_vwebadmin/images/s_onderhoudspakketten.png" alt="Vwebadmin/Onderhoudspakketten">COM_VWEBADMIN_TITLE_ONDERHOUDSPAKKETTEN</menu>
+
+			<menu link="option=com_vwebadmin&amp;view=hostings" view="hostings" img="media/com_vwebadmin/images/s_hostings.png" alt="Vwebadmin/Hostings">COM_VWEBADMIN_TITLE_HOSTINGS</menu>
+
+			<menu link="option=com_vwebadmin&amp;view=hostingpakketten" view="hostingpakketten" img="media/com_vwebadmin/images/s_hostingpakketten.png" alt="Vwebadmin/Hostingpakketten">COM_VWEBADMIN_TITLE_HOSTINGPAKKETTEN</menu>
+
+			<menu link="option=com_vwebadmin&amp;view=domeinen" view="domeinen" img="media/com_vwebadmin/images/s_domeinen.png" alt="Vwebadmin/Domeinen">COM_VWEBADMIN_TITLE_DOMEINEN</menu>
+
+			<menu link="option=com_vwebadmin&amp;view=dashboards" view="dashboards" img="media/com_vwebadmin/images/s_domeinen.png" alt="Vwebadmin/Dashboards">COM_VWEBADMIN_TITLE_DASHBOARDS</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>vwebadmin.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="languages/administrator">
+            
+			<language tag="nl-NL">nl-NL/nl-NL.com_vwebadmin.ini</language>
+			<language tag="nl-NL">nl-NL/nl-NL.com_vwebadmin.sys.ini</language>
+        </languages>
+    </administration>
+    <config>
+        <fields name="params">
+            <fieldset name="component">
+                <field name="save_history" default="0" />
+            </fieldset>
+        </fields>
+    </config>
+    <plugins>
+        <plugin group="search" plugin="vwebadmin"/>
+    </plugins>
+    
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.component-creator.com/ -->

@@ -1,0 +1,125 @@
+.g-feedback {
+	margin-left: -($content-padding);
+	margin-right: -($content-padding);
+	> .g-grid {
+		> .g-block {
+			@include breakpoint(mobile-only) {
+				margin-bottom: 30px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+// Style 1
+.g-feedback, .g-feedback-slider, .g-feedback-slideset {
+	&.style1 {
+		.g-content {
+			margin: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+		.g-feedback-text {
+			background: #ffffff;
+			border: 1px solid $base-border-color;
+			padding: 20px;
+			margin-bottom: 30px;
+			position: relative;
+			border-radius: 3px;
+			&:before {
+				border-right: 17px solid transparent;
+				border-top: 16px solid #e9e9e9;
+				z-index: 1;
+			}
+			&:after {
+				border-right: 15px solid transparent;
+				border-top: 15px solid white;
+				margin-left: 1px;
+				margin-top: -1px;
+				z-index: 2;
+			}
+			&:before, &:after {
+	 			border-left: 0 solid transparent;
+	 			content: "";
+	 			height: 0;
+	 			left: 60px;
+	 			position: absolute;
+	 			top: 100%;
+				width: 0;
+			}
+		}
+		.g-user-image {
+			float: left;
+			margin-right: 20px;
+			img {
+				border-radius: 50%;
+				width: 70px;
+			}
+		}
+		.g-user-company {
+			a {
+				&:hover {
+					color: $accent-color-1;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	.uk-dotnav {
+		margin-left: 0;
+	}
+}
+
+// Style 2
+.g-feedback, .g-feedback-slider, .g-feedback-slideset {
+	&.style2 {
+		text-align: center;
+		.g-content {
+			margin: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+		.g-feedback-text {
+			position: relative;
+			font-size: 120%;
+		}
+		.g-feedback-separator {
+			margin: 20px auto;
+			color: $accent-color-1;
+			i {
+				margin-right: 3px;
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+		.g-user-image {
+			display: inline-block;
+			margin-bottom: 15px;
+			img {
+				border-radius: 50%;
+				width: 70px;
+			}
+		}
+		.g-user-company {
+			a {
+				&:hover {
+					color: $accent-color-1;
+					text-decoration: underline;
+				}
+			}
+		}
+		.uk-dotnav {
+			> li {
+				&:first-child {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+	.uk-dotnav {
+		margin-left: 0;
+	}
+}

@@ -1,0 +1,9 @@
+enabled: '1'
+mainheading: ''
+introtext: ''
+style: style1
+columns: '3'
+css:
+  class: ''
+extra: {  }
+items: {  }

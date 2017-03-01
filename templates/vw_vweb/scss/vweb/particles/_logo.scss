@@ -1,0 +1,38 @@
+.vweb-logo {
+    .g-content.g-particle {
+        margin: 0.248rem 0.310rem;
+        padding: 0.248rem 0.310rem;
+        .g-logo {
+            font-family: get-font-family($font-family-title);
+            font-weight: $font-weight-ultrabold;
+            font-size: $core-font-size + 0.35;
+            vertical-align: middle;
+            text-transform: uppercase;
+
+            img, svg {
+                display: block;
+            }
+
+            &.g-logo-helium {
+                img, svg {
+                    max-height:84px;
+                    @include breakpoint(mobile-only){
+                        max-height: 58px!important;
+                        float: none;
+                        margin: 0 auto;
+                    }
+                }
+
+                svg {
+                    fill: $white;
+                }
+            }
+
+        	@include breakpoint(mobile-only) {
+        		display: block;
+        		text-align: center;
+        		margin: 0;
+        	}
+        }
+    }
+}

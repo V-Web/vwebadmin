@@ -1,0 +1,93 @@
+.g-simplecounter-block {
+	display: block;
+	margin: 2rem auto 0.5rem auto;
+}
+#g-simplecounter-calendar {
+	text-align: center;
+	.counter-block {
+		display: inline-block;
+		margin: 0 0.5rem;
+		padding: 0;
+	}
+	.number, .word {
+		display: block;
+		margin: 0;
+		padding: 0;
+	}
+	.number {
+		width: 100px;
+		height: 80px;
+		line-height: 80px;
+		font-size: 2rem;
+		font-weight: normal;
+		border-radius: $border-radius;
+		margin-bottom: 0.5rem;
+		color: $white;
+		@include background(linear-gradient(darken($accent-color-2, 10%) 0%, darken($accent-color-2, 10%) 50%, $accent-color-2 50%, $accent-color-2 100%));
+		@include breakpoint(desktop-range) {
+			font-size: 1.5rem;
+			height: 60px;
+			line-height: 60px;
+			width: 70px;
+		}
+		@include breakpoint(mobile-only) {
+			font-size: 1.5rem;
+			width: 48px;
+			height: 50px;
+			line-height: 50px;
+		}		
+	}
+	.word {
+		text-transform: uppercase;
+		@include breakpoint(desktop-range) {
+			font-size: 1rem;
+		}
+		@include breakpoint(mobile-only) {
+			font-size: 75%;
+		}		
+	}
+}
+#counter-onderhoud {
+	background-image: url("gantry-theme://images/background/onderhoud-counter.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 2px solid #4e5aa7;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    .counter-onderhoud-left {
+    	text-align: left;
+    	blockquote {
+    		border-left: solid 5px $accent-color-2;
+    	}
+    	@include breakpoint(no-desktop) {
+	    	>h2 {
+	    		text-align: center;
+	    	}
+	    }
+	    .button-onderhoud {
+	    	text-align: right;
+	    	@include breakpoint(no-desktop) {
+	    		text-align: center;
+	    	}
+	    	.uk-button {
+			    background: $accent-color-2;
+			    color: #fff;
+			    font-family: get-font-family($font-family-heading);
+			    margin: 0 0 10px;
+			    text-align: center;
+			    text-shadow: none;
+			    text-transform: uppercase;
+			}
+		}
+    }
+    .counter-onderhoud-right {
+    	padding-right: 30px;
+    	text-align: right;
+    	@include breakpoint(no-desktop) {
+	    	h2 {
+	    		text-align: center;
+	    	}
+	    }
+    }
+}

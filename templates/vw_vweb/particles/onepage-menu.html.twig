@@ -1,0 +1,36 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% set attr_extra = '' %}
+{% if particle.extra %}
+    {% for attributes in particle.extra %}
+        {% for key, value in attributes %}
+            {% set attr_extra = attr_extra ~ ' ' ~ key|e ~ '="' ~ value|e('html_attr') ~ '"' %}
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+
+{% block particle %}
+    
+    <div class="g-onepage-menu{% if particle.css.class %} {{ particle.css.class|e }}{% endif %}" {% if particle.extra %}{{ attr_extra|raw }}{% endif %}>
+        <ul data-uk-scrollspy-nav="{closest:'li', smoothscroll: {offset: {{ particle.smoothscrolloffset|e }}}}" data-uk-sticky="{media:768, top:{{ particle.stickyoffset|e }}, boundary: '{{ particle.boundary|e }}'}">
+        {% for item in particle.items %}
+        	{% set attr_extra_item = '' %}
+			{% for extra in item.extra %}
+				{% set attr_extra_item = attr_extra_item ~ ' ' ~ extra|keys|first|e ~ '="' ~ extra|values|first|e('html_attr') ~ '"' %}
+			{% endfor %}
+        	<li class="g-onepage-menu-item{% if item.class %} {{ item.class|e }}{% endif %}" {% if item.extra %}{{ attr_extra_item|raw }}{% endif %}>
+                <a href="{% if item.link %}#{{ item.link|e }}{% endif %}">{{ item.title|e }}</a>
+                {% if item.subtitle1 or item.subtitle2 or item.subtitle3 or item.subtitle4 or item.subtitle5 %}
+                    <ul class="submenu">
+                        {% if item.subtitle1 %}<li><a href="{% if item.sublink1 %}#{{ item.sublink1|e }}{% endif %}">{{ item.subtitle1|e }}</a></li>{% endif %}
+                        {% if item.subtitle2 %}<li><a href="{% if item.sublink2 %}#{{ item.sublink2|e }}{% endif %}">{{ item.subtitle2|e }}</a></li>{% endif %}
+                        {% if item.subtitle3 %}<li><a href="{% if item.sublink3 %}#{{ item.sublink3|e }}{% endif %}">{{ item.subtitle3|e }}</a></li>{% endif %}
+                        {% if item.subtitle4 %}<li><a href="{% if item.sublink4 %}#{{ item.sublink4|e }}{% endif %}">{{ item.subtitle4|e }}</a></li>{% endif %}
+                        {% if item.subtitle5 %}<li><a href="{% if item.sublink5 %}#{{ item.sublink5|e }}{% endif %}">{{ item.subtitle5|e }}</a></li>{% endif %}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

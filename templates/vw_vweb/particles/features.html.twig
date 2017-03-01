@@ -1,0 +1,107 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% set attr_extra = '' %}
+{% if particle.extra %}
+	{% for attributes in particle.extra %}
+		{% for key, value in attributes %}
+			{% set attr_extra = attr_extra ~ ' ' ~ key|e ~ '="' ~ value|e('html_attr') ~ '"' %}
+		{% endfor %}
+	{% endfor %}
+{% endif %}
+
+{% block particle %}
+	{% if particle.style|default('style1') == 'style1' %}
+		<div class="g-features-particle {{ particle.style|default("style1")|e }}{% if particle.css.class %} {{ particle.css.class|e }}{% endif %}" {% if particle.extra %}{{ attr_extra|raw }}{% endif %}>
+			{% if particle.mainheading or particle.introtext %}
+				<div class="g-particle-intro">
+					{% if particle.mainheading %}
+						<h3 class="g-title g-main-title">{{ particle.mainheading|raw }}</h3>
+					{% endif %}	
+					{% if particle.introtext %}<p class="g-introtext">{{ particle.introtext|raw }}</p>{% endif %}
+				</div>
+			{% endif %}
+			<div class="g-grid">
+				{% for item in particle.items %}
+					{% set attr_extra_item = '' %}
+					{% for extra in item.extra %}
+						{% set attr_extra_item = attr_extra_item ~ ' ' ~ extra|keys|first|e ~ '="' ~ extra|values|first|e('html_attr') ~ '"' %}
+					{% endfor %}
+					<div class="g-block g-features-particle-item{% if item.class %} {{ item.class|e }}{% endif %}" {% if item.extra %}{{ attr_extra_item|raw }}{% endif %}>
+						<div class="g-content">
+							{% if item.icon %}{% if item.link %}<a target="{{ item.target|default('_parent')|e }}" href="{{ item.link|e }}">{% endif %}<span class="g-features-particle-icon {{ item.icon|e }}"><span class="g-circle-border"></span></span>{% if item.link %}</a>{% endif %}{% endif %}
+							{% if item.title %}<h4 class="g-features-particle-title">{% if item.link %}<a target="{{ item.target|default('_parent')|e }}" href="{{ item.link|e }}">{% endif %}{{ item.title|e }}{% if item.link %}</a>{% endif %}</h4>{% endif %}
+							{% if item.description %}<p class="g-features-particle-desc">{{ item.description|e }}</p>{% endif %}
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	{% endif %}
+	{% if particle.style|default('style1') == 'style2' or particle.style|default('style1') == 'style3' %}
+		<div class="g-features2-particle {{ particle.style|default("style1")|e }}{% if particle.css.class %} {{ particle.css.class|e }}{% endif %}" {% if particle.extra %}{{ attr_extra|raw }}{% endif %}>
+			{% if particle.mainheading or particle.introtext %}
+				<div class="g-particle-intro">
+					{% if particle.mainheading %}
+						<h3 class="g-title g-main-title">{{ particle.mainheading|raw }}</h3>
+						<div class="g-title-separator {% if particle.introtext == false %}no-intro-text{% endif %}"></div>
+					{% endif %}	
+					{% if particle.introtext %}<p class="g-introtext">{{ particle.introtext|raw }}</p>{% endif %}
+				</div>
+			{% endif %}
+			{% for row in particle.items|batch(particle.columns|default('3')|e) %}
+				<div class="g-grid">
+					{% for item in row %}
+						{% set attr_extra_item = '' %}
+						{% for extra in item.extra %}
+							{% set attr_extra_item = attr_extra_item ~ ' ' ~ extra|keys|first|e ~ '="' ~ extra|values|first|e('html_attr') ~ '"' %}
+						{% endfor %}
+						<div class="g-block g-features2-particle-item{% if item.class %} {{ item.class|e }}{% endif %}" {% if item.extra %}{{ attr_extra_item|raw }}{% endif %}>
+							<div class="g-content">
+								{% if item.title %}<h4 class="g-features2-particle-title">{% if item.link %}<a target="{{ item.target|default('_parent')|e }}" href="{{ item.link|e }}">{% endif %}{% if item.icon %}<span class="g-features2-particle-icon {{ item.icon|e }}"></span>{% endif %}{{ item.title|e }}{% if item.link %}</a>{% endif %}</h4>{% endif %}
+								{% if item.description %}<p class="g-features2-particle-desc">{{ item.description|e }}</p>{% endif %}
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			{% endfor %}
+		</div>
+	{% endif %}
+	{% if particle.style|default('style1') == 'style4' or particle.style|default('style1') == 'style5' %}
+		<div class="g-features2-particle {{ particle.style|default("style1")|e }}{% if particle.css.class %} {{ particle.css.class|e }}{% endif %}" {% if particle.extra %}{{ attr_extra|raw }}{% endif %}>
+			{% if particle.mainheading or particle.introtext %}
+				<div class="g-particle-intro">
+					{% if particle.mainheading %}
+						<h3 class="g-title g-main-title">{{ particle.mainheading|raw }}</h3>
+						<div class="g-title-separator {% if particle.introtext == false %}no-intro-text{% endif %}"></div>
+					{% endif %}	
+					{% if particle.introtext %}<p class="g-introtext">{{ particle.introtext|raw }}</p>{% endif %}
+				</div>
+			{% endif %}
+			{% for row in particle.items|batch(particle.columns|default('3')|e) %}
+				<div class="g-grid">
+					{% for item in row %}
+						{% set attr_extra_item = '' %}
+						{% for extra in item.extra %}
+							{% set attr_extra_item = attr_extra_item ~ ' ' ~ extra|keys|first|e ~ '="' ~ extra|values|first|e('html_attr') ~ '"' %}
+						{% endfor %}
+						<div class="g-block g-features2-particle-item{% if item.class %} {{ item.class|e }}{% endif %}" {% if item.extra %}{{ attr_extra_item|raw }}{% endif %}>
+							<div class="g-content">
+								{% if item.icon %}
+									<div class="g-features2-particle-icon">
+										<span class="{{ item.icon|e }}"></span>
+									</div>
+								{% endif %}
+								{% if item.title or item.description %}
+									<div class="g-title-desc-container">
+										{% if item.title %}<h4 class="g-features2-particle-title">{% if item.link %}<a target="{{ item.target|default('_parent')|e }}" href="{{ item.link|e }}">{% endif %}{{ item.title|e }}{% if item.link %}</a>{% endif %}</h4>{% endif %}
+										{% if item.description %}<p class="g-features2-particle-desc">{{ item.description|e }}</p>{% endif %}
+									</div>
+								{% endif %}
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			{% endfor %}
+		</div>
+	{% endif %}
+{% endblock %}

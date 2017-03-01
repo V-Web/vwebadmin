@@ -1,0 +1,13 @@
+#g-services {
+    background: $services-background url($services-background-image) center center no-repeat;
+    background-size: cover;
+    color: $services-text-color;
+    padding: ($section-padding/2) 0;
+}
+
+@media print {
+    #g-services {
+        background: #fff !important;
+        color: #000 !important;
+    }
+}

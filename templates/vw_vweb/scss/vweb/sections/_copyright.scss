@@ -1,0 +1,8 @@
+#g-copyright {
+	.g-content {
+		font-size: ($core-font-size - 0.1rem);
+	}
+	@include breakpoint (mobile-only {
+		text-align: center;
+	}
+}
