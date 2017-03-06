@@ -1,7 +1,7 @@
 <?php
 return [
     'file' => 'gantry-theme://css-compiled/vweb-joomla_19.css',
-    'timestamp' => 1488361838,
+    'timestamp' => 1488381999,
     'md5' => 'eab72b18f68649b396f85b3b556021c1',
     'variables' => [
         'above-background' => '#f4f5f7',

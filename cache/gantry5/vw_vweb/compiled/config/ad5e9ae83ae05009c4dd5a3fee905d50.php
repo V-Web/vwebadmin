@@ -1,7 +1,7 @@
 <?php
 return [
     '@class' => 'Gantry\\Component\\Config\\CompiledConfig',
-    'timestamp' => 1488361835,
+    'timestamp' => 1488381996,
     'checksum' => '85a7c6adac5bd1742189c632cf609650',
     'files' => [
         'templates/vw_vweb/custom/config/19' => [

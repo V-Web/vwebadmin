@@ -244,12 +244,14 @@ if (!empty($this->extra_sidebar))
 							
 						<?php endif; ?>
 
-										<td>
-
+				<td>
+				<a href="<?php echo JRoute::_('index.php?option=com_vwebadmin&task=website.edit&id='.(int) $item->id); ?>">
 					<?php echo $item->owner; ?>
+				</a>
 				</td>				<td>
-
+				<a href="<?php echo JRoute::_('index.php?option=com_vwebadmin&task=website.edit&id='.(int) $item->id); ?>">
 					<?php echo $item->website; ?>
+				</a>
 				</td>				<td>
 					<?php echo JHtml::_('listhelper.toggle', $item->onderhoud, 'websites', 'onderhoud', $i); ?>
 				</td>				<td>

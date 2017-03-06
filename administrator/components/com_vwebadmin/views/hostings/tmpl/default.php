@@ -239,8 +239,9 @@ if (!empty($this->extra_sidebar))
 						<?php endif; ?>
 
 										<td>
-
+				<a href="<?php echo JRoute::_('index.php?option=com_vwebadmin&task=hosting.edit&id='.(int) $item->id); ?>">
 					<?php echo $item->website; ?>
+				</a>
 				</td>				<td>
 
 					<?php echo $item->package; ?>

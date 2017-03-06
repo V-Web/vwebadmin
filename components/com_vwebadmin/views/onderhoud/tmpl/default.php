@@ -9,9 +9,18 @@
 // No direct access
 defined('_JEXEC') or die;
 JHtml::_('stylesheet', 'media/com_vwebadmin/css/item-information.css');
+JHtml::_('stylesheet', 'media/com_vwebadmin/css/dashboard.css');
 
 $user       = JFactory::getUser();
 $userId     = $user->get('id');
+
+$canCreate  = $user->authorise('core.create', 'com_vwebadmin') && file_exists(JPATH_COMPONENT . DIRECTORY_SEPARATOR . 'models' . DIRECTORY_SEPARATOR . 'forms' . DIRECTORY_SEPARATOR . 'hostingform.xml');
+$canEdit    = $user->authorise('core.edit', 'com_vwebadmin') && file_exists(JPATH_COMPONENT . DIRECTORY_SEPARATOR . 'models' . DIRECTORY_SEPARATOR . 'forms' . DIRECTORY_SEPARATOR . 'hostingform.xml');
+$canCheckin = $user->authorise('core.manage', 'com_vwebadmin');
+$canChange  = $user->authorise('core.edit.state', 'com_vwebadmin');
+$canDelete  = $user->authorise('core.delete', 'com_vwebadmin');
+
+
 $model = $this->getModel();
 $this->cms = $model->getCms($this->item->cms);
 $this->cmsversion = $model->getCmsversion($this->item->cms_version);
@@ -22,20 +31,17 @@ $this->websitename = $model->getSitename($this->item->website);
 $this->owner = $model->getOwner($this->item->website);
 $now = time();
 // DATE DIFF FOR ONDERHOUD
+$start_date_onderhoud = strtotime($this->item->subscription_start);
 $end_date_onderhoud = strtotime($this->item->subscription_end);
-$datediff_onderhoud = $end_date_onderhoud - $now;
-$remaining_onderhoud = floor($datediff_onderhoud / (60*60*24));
-$datepercentage_onderhoud = floor(((365 - $remaining_onderhoud) / 365) * 100);
+$datepercentage_onderhoud = abs(floor(($start_date_onderhoud - $now) / ($end_date_onderhoud - $start_date_onderhoud) * 100));
 // DATE DIFF FOR HOSTING
+$start_date_hosting = strtotime($this->hosting['subscription_start']);
 $end_date_hosting = strtotime($this->hosting['subscription_end']);
-$datediff_hosting = $end_date_hosting - $now;
-$remaining_hosting = floor($datediff_hosting / (60*60*24));
-$datepercentage_hosting = floor(((365 - $remaining_hosting) / 365) * 100);
+$datepercentage_domain = abs(floor(($start_date_hosting - $now) / ($end_date_hosting - $start_date_hosting) * 100));
 // DATE DIFF FOR DOMAIN
+$start_date_domain = strtotime($this->domain['subscription_start']);
 $end_date_domain = strtotime($this->domain['subscription_end']);
-$datediff_domain = $end_date_domain - $now;
-$remaining_domain = floor($datediff_domain / (60*60*24));
-$datepercentage_domain = floor(((365 - $remaining_domain) / 365) * 100);
+$datepercentage_domain = abs(floor(($start_date_domain - $now) / ($end_date_domain - $start_date_domain) * 100));
 ?>
 <!--
 <pre>
@@ -52,13 +58,16 @@ $datepercentage_domain = floor(((365 - $remaining_domain) / 365) * 100);
 <?php if($userId !== $this->owner['owner']) {
 	echo "<h1>Helaas</h1><p>U heeft geen toegang tot dit item. Klik hier om naar uw dashboard terug te keren</p>";
 } else { ?>
-<h1><?php echo preg_replace('#^https?://#', '', $this->websitename); ?></h1>
+<div class="uk-grid">
+	<div class="uk-width-large-3-4"><h2>Uw producten voor: <?php echo preg_replace('#^https?://#', '', $this->websitename); ?></h2></div>
+	<div class="uk-width-large-1-4 dashboard-buttons"><a href="/dashboard/website-onderhoud" class="btn dashboard">Terug naar onderhoudsoverzicht</a></div>
+</div>
 
-<div class="uk-accordion" data-uk-accordion="{showfirst: false}">
+<div class="uk-accordion overview-accordion" data-uk-accordion="{showfirst: false}">
 
     <h3 class="uk-accordion-title">Website Onderhoud</h3>
     <div class="uk-accordion-content">
-    	<h2>Abonnement: <?php echo $this->mpackage['package_name']; ?></h2>
+    	<h3>Abonnement: <?php echo $this->mpackage['package_name']; ?></h3>
     	<div class="uk-grid">
 			<div class="uk-width-large-1-1">
 				<div class="uk-progress uk-progress-striped uk-active uk-progress-success">
@@ -110,11 +119,11 @@ $datepercentage_domain = floor(((365 - $remaining_domain) / 365) * 100);
 			</div>			
 		</div>
     </div>
-
+    
     <h3 class="uk-accordion-title">Hosting</h3>
     <div class="uk-accordion-content">
+    	<?php if($this->hosting) { ?>
     	<h3>Hostingpakket: <?php echo $this->hosting['package_name']; ?></h3>
-    	<h5><?php echo $this->hosting['package_price']; ?></h5>
     	<div class="uk-grid">
 			<div class="uk-width-large-1-1">
 				<div class="uk-progress uk-progress-striped uk-active uk-progress-success">
@@ -130,14 +139,17 @@ $datepercentage_domain = floor(((365 - $remaining_domain) / 365) * 100);
 			</div>
 			<div class="uk-width-large-1-3 dateto"><?php echo date("d-m-Y", strtotime($this->hosting['subscription_end'])); ?></div>			
 		</div>
+		<?php } else { ?>
+			<h3>Helaas...</h3>
+			<p>...u maakt nog geen gebruik van een hostingpakket voor <strong><?php echo preg_replace('#^https?://#', '', $this->websitename); ?></strong></p>
+		<?php } ?>
     </div>
-
-    <h3 class="uk-accordion-title">Domeinregistratie <?php echo $this->websitename; ?></h3>
+    <h3 class="uk-accordion-title">Domeinregistratie</h3>
     <div class="uk-accordion-content">
     	<div class="uk-grid">
 			<div class="uk-width-large-1-1">
 				<div class="uk-progress uk-progress-striped uk-active uk-progress-success">
-				    <div class="uk-progress-bar" style="width: <?php echo $datepercentage_domain; ?>%;"><?php echo $datepercentage; ?>%</div>
+				    <div class="uk-progress-bar" style="width: <?php echo $datepercentage_domain; ?>%;"><?php echo $datepercentage_domain; ?>%</div>
 				</div>
 			</div>
 			<div class="uk-width-large-1-3 datefrom"><?php echo date("d-m-Y", strtotime($this->domain['subscription_start'])); ?></div>
@@ -153,20 +165,18 @@ $datepercentage_domain = floor(((365 - $remaining_domain) / 365) * 100);
 
 </div>
 
+<?php if ($canDelete): ?>
+<h3>Admin Actions</h3>
 <div class="item_fields">
 	<table class="table">
 		<tr>
 			<td>Test</td>
 			<td><a class="btn" href="<?php echo JRoute::_('index.php?option=com_vwebadmin&task=onderhoud.sendmymail&id=' . $this->item->id, false, 2); ?>"><?php echo JText::_("COM_VWEBADMIN_DELETE_ITEM"); ?></a></td>
 		</tr>
-		<tr>
-			<td>Image</td>
-			<td> <img src="<?php echo $this->cms['image']; ?>" alt="<?php echo $this->cms['cms']; ?>"></td>
-		</tr>
-
 	</table>
 
 </div>
+<?php endif; ?>
 
 <?php } ?>
 

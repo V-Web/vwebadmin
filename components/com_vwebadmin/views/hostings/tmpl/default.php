@@ -13,6 +13,7 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
 JHtml::_('bootstrap.tooltip');
 JHtml::_('behavior.multiselect');
 JHtml::_('formbehavior.chosen', 'select');
+JHtml::_('stylesheet', 'media/com_vwebadmin/css/dashboard.css');
 
 $user       = JFactory::getUser();
 $userId     = $user->get('id');
@@ -24,7 +25,10 @@ $canCheckin = $user->authorise('core.manage', 'com_vwebadmin');
 $canChange  = $user->authorise('core.edit.state', 'com_vwebadmin');
 $canDelete  = $user->authorise('core.delete', 'com_vwebadmin');
 ?>
-
+<div class="uk-grid">
+	<div class="uk-width-large-3-4"><h2><?php echo JText::_('COM_VWEBADMIN_DASHBOARD_HOSTING_HEADING'); ?></h2></div>
+	<div class="uk-width-large-1-4 dashboard-buttons"><a href="/dashboard" class="btn dashboard">Terug naar dashboard</a></div>
+</div>
 <form action="<?php echo JRoute::_('index.php?option=com_vwebadmin&view=hostings'); ?>" method="post"
       name="adminForm" id="adminForm">
 
@@ -35,27 +39,18 @@ $canDelete  = $user->authorise('core.delete', 'com_vwebadmin');
 			<?php if (isset($this->items[0]->state)): ?>
 				
 			<?php endif; ?>
-
-							<th class=''>
-				<?php echo JHtml::_('grid.sort',  'COM_VWEBADMIN_HOSTINGS_WEBSITE', 'a.website', $listDirn, $listOrder); ?>
+				<th class=''>
+					<?php echo JHtml::_('grid.sort',  'COM_VWEBADMIN_HOSTINGS_WEBSITE', 'a.website', $listDirn, $listOrder); ?>
 				</th>
 				<th class=''>
-				<?php echo JHtml::_('grid.sort',  'COM_VWEBADMIN_HOSTINGS_PACKAGE', 'a.package', $listDirn, $listOrder); ?>
+					<?php echo JHtml::_('grid.sort',  'COM_VWEBADMIN_HOSTINGS_PACKAGE', 'a.package', $listDirn, $listOrder); ?>
 				</th>
 				<th class=''>
-				<?php echo JHtml::_('grid.sort',  'COM_VWEBADMIN_HOSTINGS_SUBSCRIPTION_START', 'a.subscription_start', $listDirn, $listOrder); ?>
+					<?php echo JHtml::_('grid.sort',  'COM_VWEBADMIN_HOSTINGS_SUBSCRIPTION_START', 'a.subscription_start', $listDirn, $listOrder); ?>
 				</th>
 				<th class=''>
-				<?php echo JHtml::_('grid.sort',  'COM_VWEBADMIN_HOSTINGS_SUBSCRIPTION_END', 'a.subscription_end', $listDirn, $listOrder); ?>
+					<?php echo JHtml::_('grid.sort',  'COM_VWEBADMIN_HOSTINGS_SUBSCRIPTION_END', 'a.subscription_end', $listDirn, $listOrder); ?>
 				</th>
-
-
-							<?php if ($canEdit || $canDelete): ?>
-					<th class="center">
-				<?php echo JText::_('COM_VWEBADMIN_HOSTINGS_ACTIONS'); ?>
-				</th>
-				<?php endif; ?>
-
 		</tr>
 		</thead>
 		<tfoot>
@@ -77,29 +72,20 @@ $canDelete  = $user->authorise('core.delete', 'com_vwebadmin');
 					
 				<?php endif; ?>
 
-								<td>
-
-					<?php echo $item->website; ?>
+				<td>
+					<?php echo preg_replace('#^https?://#', '', $item->website); ?>
 				</td>
 				<td>
 
 					<?php echo $item->package; ?>
 				</td>
 				<td>
-
-					<?php echo $item->subscription_start; ?>
+					<?php echo date("d-m-Y", strtotime($item->subscription_start)); ?>
 				</td>
 				<td>
 
-					<?php echo $item->subscription_end; ?>
+					<?php echo date("d-m-Y", strtotime($item->subscription_end)); ?>
 				</td>
-
-
-								<?php if ($canEdit || $canDelete): ?>
-					<td class="center">
-					</td>
-				<?php endif; ?>
-
 			</tr>
 		<?php endforeach; ?>
 		</tbody>

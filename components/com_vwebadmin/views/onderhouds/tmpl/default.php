@@ -13,6 +13,7 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
 JHtml::_('bootstrap.tooltip');
 JHtml::_('behavior.multiselect');
 JHtml::_('formbehavior.chosen', 'select');
+JHtml::_('stylesheet', 'media/com_vwebadmin/css/dashboard.css');
 
 $user       = JFactory::getUser();
 $userId     = $user->get('id');
@@ -24,7 +25,10 @@ $canCheckin = $user->authorise('core.manage', 'com_vwebadmin');
 $canChange  = $user->authorise('core.edit.state', 'com_vwebadmin');
 $canDelete  = $user->authorise('core.delete', 'com_vwebadmin');
 ?>
-
+<div class="uk-grid">
+	<div class="uk-width-large-3-4"><h2><?php echo JText::_('COM_VWEBADMIN_DASHBOARD_MAINTENANCE_HEADING'); ?></h2></div>
+	<div class="uk-width-large-1-4 dashboard-buttons"><a href="/dashboard" class="btn dashboard">Terug naar dashboard</a></div>
+</div>
 <form action="<?php echo JRoute::_('index.php?option=com_vwebadmin&view=onderhouds'); ?>" method="post"
       name="adminForm" id="adminForm">
 
@@ -36,34 +40,36 @@ $canDelete  = $user->authorise('core.delete', 'com_vwebadmin');
 				
 			<?php endif; ?>
 
-							<th class=''>
-				<?php echo JHtml::_('grid.sort',  'COM_VWEBADMIN_ONDERHOUDS_WEBSITE', 'a.website', $listDirn, $listOrder); ?>
-				</th>
 				<th class=''>
-				<?php echo JHtml::_('grid.sort',  'COM_VWEBADMIN_ONDERHOUDS_PACKAGE', 'a.package', $listDirn, $listOrder); ?>
+					<?php echo JHtml::_('grid.sort',  'COM_VWEBADMIN_ONDERHOUDS_WEBSITE', 'a.website', $listDirn, $listOrder); ?>
 				</th>
-				<th class=''>
-				<?php echo JHtml::_('grid.sort',  'COM_VWEBADMIN_ONDERHOUDS_SUBSCRIPTION_START', 'a.subscription_start', $listDirn, $listOrder); ?>
+				<th class="hidden-phone">
+					<?php echo JHtml::_('grid.sort',  'COM_VWEBADMIN_ONDERHOUDS_PACKAGE', 'a.package', $listDirn, $listOrder); ?>
 				</th>
-				<th class=''>
-				<?php echo JHtml::_('grid.sort',  'COM_VWEBADMIN_ONDERHOUDS_SUBSCRIPTION_END', 'a.subscription_end', $listDirn, $listOrder); ?>
+				<th class="hidden-phone">
+					<?php echo JHtml::_('grid.sort',  'COM_VWEBADMIN_ONDERHOUDS_CMS', 'a.cms', $listDirn, $listOrder); ?>
 				</th>
-				<th class=''>
-				<?php echo JHtml::_('grid.sort',  'COM_VWEBADMIN_ONDERHOUDS_CMS', 'a.cms', $listDirn, $listOrder); ?>
+				<th class="hidden-phone">
+					<?php echo JHtml::_('grid.sort',  'COM_VWEBADMIN_ONDERHOUDS_CMS_VERSION', 'a.cms_version', $listDirn, $listOrder); ?>
 				</th>
+				<!--
 				<th class=''>
-				<?php echo JHtml::_('grid.sort',  'COM_VWEBADMIN_ONDERHOUDS_CMS_VERSION', 'a.cms_version', $listDirn, $listOrder); ?>
+					<?php echo JHtml::_('grid.sort',  'COM_VWEBADMIN_ONDERHOUDS_SUBSCRIPTION_START', 'a.subscription_start', $listDirn, $listOrder); ?>
+				</th>
+				-->
+				<th class="hidden-phone">
+					<?php echo JHtml::_('grid.sort',  'COM_VWEBADMIN_ONDERHOUDS_SUBSCRIPTION_RENEW', 'a.subscription_end', $listDirn, $listOrder); ?>
 				</th>
 				<th>
-				Details
+					Details
 				</th>
-
-
+				<!--
 							<?php if ($canEdit || $canDelete): ?>
 					<th class="center">
 				<?php echo JText::_('COM_VWEBADMIN_ONDERHOUDS_ACTIONS'); ?>
 				</th>
 				<?php endif; ?>
+			-->
 
 		</tr>
 		</thead>
@@ -86,36 +92,32 @@ $canDelete  = $user->authorise('core.delete', 'com_vwebadmin');
 					
 				<?php endif; ?>
 
-								<td>
-
-					<?php echo $item->website; ?>
-				</td>
 				<td>
+					<a class="website-dashboard" href="<?php echo JRoute::_('index.php?option=com_vwebadmin&task=onderhoud&id=' . $item->id, false, 2); ?>"><?php echo preg_replace('#^https?://#', '', $item->website); ?></a>
 
+				</td>
+				<td class="hidden-phone">
 					<?php echo $item->package; ?>
-				</td>
-				<td>
-
-					<?php echo $item->subscription_start; ?>
-				</td>
-				<td>
-
-					<?php echo $item->subscription_end; ?>
-				</td>
-				<td>
-
+				</td>				
+				<td class="hidden-phone">
 					<?php echo $item->cms; ?>
 				</td>
-				<td>
-
+				<td class="hidden-phone">
 					<?php echo $item->cms_version; ?>
 				</td>
-				<td class="center">
-						<a href="<?php echo JRoute::_('index.php?option=com_vwebadmin&task=onderhoud&id=' . $item->id, false, 2); ?>" class="btn btn-mini" type="button"><i class="icon-edit" ></i></a>
-					</td>
+				<!--
+				<td>
+					<?php echo date("d-m-Y", strtotime($item->subscription_start)); ?>
+				</td>
+				-->
+				<td class="hidden-phone">
+					<?php echo date("d-m-Y", strtotime($item->subscription_end)); ?>
+				</td>
+				<td>
+					<a class="item-details" href="<?php echo JRoute::_('index.php?option=com_vwebadmin&task=onderhoud&id=' . $item->id, false, 2); ?>">Bekijken</a>
+				</td>
 
-
-								<?php if ($canEdit || $canDelete): ?>
+				<?php if ($canEdit || $canDelete): ?>
 					<td class="center">
 					</td>
 				<?php endif; ?>

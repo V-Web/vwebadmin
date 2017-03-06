@@ -1,3 +1,13 @@
+.uk-accordion-title:before {
+    content: "\f13a";
+    font-family: FontAwesome;
+    margin-right: 0.538rem;
+}
+.uk-accordion.overview-accordion {
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
 .products {
     border: 2px solid;
     -moz-border-radius: 5px;
@@ -33,4 +43,60 @@
 }
 .highlight.bg-color-orange {
     background: #f0ad4e;
+}
+.dashboard-buttons {
+    margin: auto auto!important;
+    text-align: right;
+}
+.btn.dashboard {
+    background: rgb(107,117,183); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(107,117,183,1) 0%, rgba(30,87,153,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(107,117,183,1) 0%,rgba(30,87,153,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(107,117,183,1) 0%,rgba(30,87,153,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b75b7', endColorstr='#1e5799',GradientType=0 ); /* IE6-9 */
+    color: #fff;
+    text-shadow: none;
+}
+.btn.dashboard:hover {
+    background: rgb(30,87,153); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(107,117,183,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(107,117,183,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(107,117,183,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#6b75b7',GradientType=0 ); /* IE6-9 */
+    color: #fff;
+    text-shadow: none;
+}
+.btn.dashboard:before {
+    content: "\f137";
+    font-family: FontAwesome;
+    margin-right: 0.538rem;
+}
+.website-dashboard:after, .item-details:after {
+    content: "\f138";
+    font-family: FontAwesome;
+    margin-left: 0.538rem;
+}
+.user-messages {
+    padding: 1rem;
+    border: solid 2px #333;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+.user-message {
+    padding: 0.538rem 0;
+}
+.user-message:last-of-type {
+    border-top: solid 2px #cdcdcd;
+}
+.user-message:first-of-type {
+    border-top: solid 0px #cdcdcd;
+}
+.actuele-berichten:before {
+    content: "\f27b";
+    font-family: FontAwesome;
+    margin-right: 0.538rem;
+}
+.user-messages h3 {
+    font-size: 1.2rem;
+    border-bottom: solid 2px #C50C16;
 }

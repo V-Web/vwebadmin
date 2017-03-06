@@ -1,7 +1,7 @@
 <?php
 return [
     '@class' => 'Gantry\\Component\\Config\\CompiledBlueprints',
-    'timestamp' => 1488361835,
+    'timestamp' => 1488381996,
     'checksum' => '33a12c2beefeb4ce0b6b481828b35b17',
     'files' => [
         'templates/vw_vweb/custom/particles' => [

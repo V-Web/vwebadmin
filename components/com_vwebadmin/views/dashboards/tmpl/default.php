@@ -68,7 +68,7 @@ if($user->id != 0)
 				<a href="/dashboard/website-hosting">
 			<?php endif; ?>
 				<div class="icon">
-					<i class="fa fa-cubes companyaddress-icons"> </i>
+					<i class="fa fa-database" aria-hidden="true"></i>
 				</div>
 				<div class="stat"><?php echo $this->nohosting; ?></div>
 				<div class="service-title">Hosting</div>
@@ -95,17 +95,27 @@ if($user->id != 0)
 		</div>
 	</div>
 </div>
-<div class="user-messages">
-<?php if(($this->nohosting) < ($this->nomaintenance)) {
-	echo "U heeft momenteel 1 of meer websites bij ons in onderhoud waarbij de hosting van sommige websites niet door V-Web wordt verzorgt. Om uw website optimaal te laten presteren is het vaak verstandig om de hosting bij ons onder te brengen. Zo hebben we volledige controle over de server waarop uw website draait en kunnen we waar nodig zaken aanpassen.";
-} elseif (($this->nohosting) > ($this->nomaintenance)) {
-	echo "U heeft momenteel 1 of meer websites waarvoor V-Web de hosting regelt. Deze websites zijn momenteel niet in onderhoud bij V-Web.";
-}
-?>
+<div class="uk-grid">
+	<div class="uk-width-large-1-2">
+		<div class="user-messages">
+			<h3 class="actuele-berichten">Actuele berichten</h3>
+			<?php if($this->nomaintenance == 0) {
+				echo "<div class='user-message'>Actief en tijdig onderhoud van uw website zorgt voor betere prestaties, vermindert de kans op technische problemen en beschermt tegen malware en hackers. Wij hebben een uitgebreid onderhoudsprogramma opgezet waarmee we u website of webshop in absolute topconditie houden.</div>";
+			}	
+			?>
+			<?php if(($this->nohosting) < ($this->nomaintenance)) {
+				echo "<div class='user-message'>U heeft momenteel 1 of meer websites bij ons in onderhoud waarbij de hosting van sommige websites niet door V-Web wordt verzorgt. Om uw website optimaal te laten presteren is het vaak verstandig om de hosting bij ons onder te brengen. Zo hebben we volledige controle over de server waarop uw website draait en kunnen we waar nodig zaken aanpassen.</div>";
+			} elseif (($this->nohosting) > ($this->nomaintenance)) {
+				echo "<div class='user-message'>U heeft momenteel 1 of meer websites waarvoor V-Web de hosting regelt. Deze websites zijn momenteel niet in onderhoud bij V-Web.</div>";
+			}
+			?>
+			</div>
+	</div>
+	<div class="uk-width-large-1-2"></div>
 </div>
 <?php } else {
-    $message = "U dient in te loggen om uw dashboard te kunnen zien!";
-    $url = JRoute::_('index.php?option=com_users&view=login&return=') . base64_encode('index.php?option=com_vwebadmin&view=dashboard');
-	$app->redirect($url, $message);
-}
-?>
+			    $message = "U dient in te loggen om uw dashboard te kunnen zien!";
+			    $url = JRoute::_('index.php?option=com_users&view=login&return=') . base64_encode('index.php?option=com_vwebadmin&view=dashboard');
+				$app->redirect($url, $message);
+			}
+			?>

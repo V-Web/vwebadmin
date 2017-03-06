@@ -13,6 +13,7 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
 JHtml::_('bootstrap.tooltip');
 JHtml::_('behavior.multiselect');
 JHtml::_('formbehavior.chosen', 'select');
+JHtml::_('stylesheet', 'media/com_vwebadmin/css/dashboard.css');
 
 $user       = JFactory::getUser();
 $userId     = $user->get('id');
@@ -24,6 +25,10 @@ $canCheckin = $user->authorise('core.manage', 'com_vwebadmin');
 $canChange  = $user->authorise('core.edit.state', 'com_vwebadmin');
 $canDelete  = $user->authorise('core.delete', 'com_vwebadmin');
 ?>
+<div class="uk-grid">
+	<div class="uk-width-large-3-4"><h2><?php echo JText::_('COM_VWEBADMIN_DASHBOARD_DOMAINS_HEADING'); ?></h2></div>
+	<div class="uk-width-large-1-4 dashboard-buttons"><a href="/dashboard" class="btn dashboard">Terug naar dashboard</a></div>
+</div>
 
 <form action="<?php echo JRoute::_('index.php?option=com_vwebadmin&view=domeinen'); ?>" method="post"
       name="adminForm" id="adminForm">
@@ -79,12 +84,11 @@ $canDelete  = $user->authorise('core.delete', 'com_vwebadmin');
 					<?php echo $item->website; ?>
 				</td>
 				<td>
-
-					<?php echo $item->subscription_start; ?>
+					<?php echo date("d-m-Y", strtotime($item->subscription_start)); ?>
 				</td>
 				<td>
 
-					<?php echo $item->subscription_end; ?>
+					<?php echo date("d-m-Y", strtotime($item->subscription_end)); ?>
 				</td>
 
 
